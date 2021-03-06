@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Generator rozgrywek sportowych.">
+    <title>Roundmaker</title>
+    <link rel="stylesheet" href="neograd.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <br>
+            Stwórz terminiarz na swoje zawody. Wybierz ilość drużyn, wpisz nazwy i sprawdź kto z kim zagra. <br>
+            Genarator umożliwia także losowanie grup. Wybierz odpowiednia ilość grup i drużyn, następnie uzupełnij podział na koszyki(pot) a algorytm wylosuje odpowiednio grupy i wygeneruje dla nich terminiarz.<br>
+            Możesz poźniej skopiować cały kalendarz. <br>
+            Szybko i wygodnie ! :)  <br><br></div>
+    Wybierz ilość drużyn:
+    
+    <select id="select">
+        <option>--</option>
+        <option>4</option>
+        <option>6</option>
+        <option>8</option>
+        <option>10</option>
+        <option>12</option>
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option>20</option>
+        <option value='gr34'>3 groups - 12 teams</option>
+        <option value='gr43'>4 groups - 12 teams</option>
+        <option value='gr44'>4 groups - 16 teams</option>
+        <option value='gr64'>6 groups - 24 teams</option>
+        <option value='gr84'>8 groups - 32 teams</option>
+        <option value='gr26'>2 groups - 12 teams</option>
+        <option value='gr46'>4 groups - 24 teams</option>
+      </select>
+       
+      <div class="btns">
+    <button onclick="choose()" class="btn-rect-4 btn-round-4 btn-neograd color-blue">OK</button>
+    <button onclick="reset()" class="btn-rect-4 btn-round-4 btn-neograd-r color-red">Reset</button>
+</div>
+    <div class="set_teams">
+        
+    </div>
+
+    <div class="div_schedule">
+        <table class="schedule">
+            
+        </table>
+    </div>
+
+    <div class="buttons"></div>
+
+
+</div>
+
+    <script src="schedule.js"></script>
+</body>
+</html>

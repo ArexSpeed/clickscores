@@ -1,0 +1,761 @@
+/* Kind of buttons */
+.btn-rect-1{
+    width: 20px;
+    height: 10px;
+}
+.btn-rect-2{
+    width: 40px;
+    height: 10px;
+}
+.btn-rect-3{
+    width: 80px;
+    height: 40px;
+}
+.btn-rect-4{
+    width: 100px;
+    height: 50px;
+}
+.btn-rect-5{
+    width: 150px;
+    height: 75px;
+}
+.btn-rect-6{
+    width: 200px;
+    height: 100px;
+}
+.btn-rect-7{
+    width: 250px;
+    height: 125px;
+}
+.btn-round-1{
+    border-radius: 2px;
+}
+.btn-round-2{
+    border-radius: 5px;
+}
+.btn-round-3{
+    border-radius: 10px;
+}
+.btn-round-4{
+    border-radius: 20px;
+}
+.btn-round-5{
+    border-radius: 50px;
+}
+.btn-round-6{
+    border-radius: 75px;
+}
+.btn-round-7{
+    border-radius: 100px;
+}
+
+.btn-circle-1{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0;
+}
+.btn-circle-2{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0;
+}
+.btn-circle-3{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0;
+}
+.btn-circle-4{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding: 0;
+}
+.btn-circle-5{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    padding: 0;
+}
+.btn-square-1{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+.btn-square-2{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+}
+.btn-square-3{
+    width: 75px;
+    height: 75px;
+    padding: 0;
+}
+.btn-square-4{
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+.btn-square-5{
+    width: 150px;
+    height: 150px;
+    padding: 0;
+}
+.btn-square-6{
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+.btn-square-7{
+    width: 300px;
+    height: 300px;
+    padding: 0;
+}
+
+@media screen and (max-width: 500px){
+    .btn-square-huge{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* NeoGrad */
+.btn-neograd{
+    color: #000;
+    transition: all 400ms ease-in-out;
+    text-align: center;
+}
+.btn-neograd-r{
+    background: transparent;
+}
+
+.btn-neograd.color-green{
+    background: linear-gradient(to left,lightgreen, darkgreen);
+    border-color: green;
+    box-shadow: 0 0 40px 0 green inset;
+}
+.btn-neograd.color-green:hover {
+    box-shadow: 0 0 10px 0 green inset, 0 0 10px 3px green;
+    background: transparent;
+}
+.btn-neograd-r.color-green {
+    box-shadow: 0 0 10px 0 green inset, 0 0 10px 0px green;
+    border-color: green;
+    color: green;
+}
+.btn-neograd-r.color-green:hover{
+    background: linear-gradient(to left,lightgreen, darkgreen);
+    box-shadow: 0 0 40px 0px green inset;
+    color: #000;
+    transition: all 400ms ease-in-out;
+}
+.btn-neograd.color-red{
+    background: linear-gradient(to left,lightcoral, darkred);
+    border-color: red;
+    box-shadow: 0 0 40px 0px red inset;
+}
+.btn-neograd.color-red:hover {
+    box-shadow: 0 0 10px 0 red inset, 0 0 10px 3px red;
+    background: transparent;
+}
+.btn-neograd-r.color-red {
+    box-shadow: 0 0 10px 0 red inset, 0 0 10px 0px red;
+    border-color: red;
+    color: red;
+}
+.btn-neograd-r.color-red:hover{
+    background: linear-gradient(to left,lightcoral, darkred);
+    color: #fff;
+    box-shadow: 0 0 40px 0px red inset;
+    transition: all 400ms ease-in-out;
+}
+.btn-neograd.color-blue{
+    background: linear-gradient(to left,lightblue, darkblue);
+    border-color: blue;
+    box-shadow: 0 0 40px 0px blue inset;
+}
+.btn-neograd.color-blue:hover {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 3px blue;
+    background: transparent;
+}
+.btn-neograd-r.color-blue {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 0px blue;
+    border-color: blue;
+    color: blue;
+}
+.btn-neograd-r.color-blue:hover{
+    background: linear-gradient(to left,lightblue, darkblue);
+    color: #fff;
+    box-shadow: 0 0 40px 0px blue inset, 0 0 10px 0 blue;
+    transition: all 200ms ease-in-out;
+}
+.btn-neograd.color-yellow{
+    background: linear-gradient(to left,yellow, orange);
+    border-color: yellow;
+    box-shadow: 0 0 40px 0px yellow inset;
+}
+.btn-neograd.color-yellow:hover {
+    box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 3px yellow;
+    background: transparent;
+}
+.btn-neograd-r.color-yellow {
+    box-shadow: 0 0 10px 0 yellow inset, 0 0 10px 0px yellow;
+    border-color: yellow;
+    color: yellow;
+}
+.btn-neograd-r.color-yellow:hover{
+    background: linear-gradient(to left,yellow,orange);
+    color: #000;
+    box-shadow: 0 0 40px 0px yellow inset;
+    transition: all 400ms ease-in-out;
+}
+.btn-neograd.color-pink{
+    background: linear-gradient(to left,lightpink, purple);
+    border-color: pink;
+    box-shadow: 0 0 40px 0px pink inset;
+}
+.btn-neograd.color-pink:hover {
+    box-shadow: 0 0 10px 0 pink inset, 0 0 10px 3px pink;
+    background: transparent;
+}
+.btn-neograd-r.color-pink {
+    box-shadow: 0 0 10px 0 pink inset, 0 0 10px 0px pink;
+    border-color: pink;
+    color: pink;
+}
+.btn-neograd-r.color-pink:hover{
+    background: linear-gradient(to left,lightpink, purple);
+    color: #000;
+    box-shadow: 0 0 40px 0px pink inset;
+    transition: all 400ms ease-in-out;
+}
+.btn-neograd.color-black{
+    background: linear-gradient(to left,gray, black);
+    border-color: black;
+    color: #fff;
+    box-shadow: 0 0 40px 0px black inset;
+}
+.btn-neograd.color-black:hover {
+    box-shadow: 0 0 10px 0 black inset, 0 0 10px 3px black;
+    background: transparent;
+}
+.btn-neograd-r.color-black {
+    box-shadow: 0 0 10px 0 black inset, 0 0 10px 0px black;
+    border-color: black;
+    color: #fff;
+}
+.btn-neograd-r.color-black:hover{
+    background: linear-gradient(to left,gray, black);
+    box-shadow: 0 0 40px 0px black inset;
+    color: black;
+    transition: all 400ms ease-in-out;
+}
+/* Gradient */
+.btn-grad{
+    background: linear-gradient(to left,lightgreen, darkgreen);
+    border:none;
+    color: #000;
+    transition: all 200ms ease-in-out;
+}
+
+.btn-grad.color-green{
+    background: linear-gradient(to left,lightgreen, darkgreen);
+}
+.btn-grad-2.color-green{
+    background: linear-gradient(to left, darkgreen, lightgreen);
+}
+.btn-grad-3.color-green{
+    background: radial-gradient(darkgreen, lightgreen);
+}
+.btn-grad.color-green:hover{
+    box-shadow:  inset -3px 3px 10px lightgreen, 
+    inset 3px -3px 10px darkgreen;
+}
+.btn-grad.color-blue{
+    background: linear-gradient(to left,lightblue, darkblue);
+}
+.btn-grad.color-blue:hover{
+    box-shadow:  inset -3px 3px 10px lightblue, 
+    inset 3px -3px 10px darkblue;
+}
+.btn-grad.color-red{
+    background: linear-gradient(to left,lightcoral, darkred);
+}
+.btn-grad.color-red:hover{
+    box-shadow:  inset -3px 3px 10px lightcoral, 
+    inset 3px -3px 10px darkred;
+}
+.btn-grad.color-yellow{
+    background: linear-gradient(to left,yellow, orange);
+}
+.btn-grad.color-yellow:hover{
+    box-shadow:  inset -3px 3px 10px yellow, 
+    inset 3px -3px 10px orange;
+}
+.btn-grad.color-pink{
+    background: linear-gradient(to left,pink, purple);
+}
+.btn-grad.color-pink:hover{
+    box-shadow:  inset -3px 3px 10px pink, 
+    inset 3px -3px 10px purple;
+}
+.btn-grad.color-black{
+    background: linear-gradient(to left,gray, black);
+    color: #fff;
+}
+.btn-grad.color-black:hover{
+    box-shadow:  inset -3px 3px 10px gray, 
+    inset 3px -3px 10px black;
+}
+
+/* Fluor Buttons */
+.btn-fluor{
+    border: none;
+}
+.btn-fluor.color-blue{
+    background: #45f3ff;
+}
+.btn-fluor.color-green{
+    background: #83f52c;
+}
+.btn-fluor.color-red{
+    background: #fd1c03;
+}
+.btn-fluor.color-yellow{
+    background: #f3f315;
+}
+.btn-fluor.color-pink{
+    background: #ff0099;
+}
+.btn-fluor.color-orange{
+    background: #ff6000;
+}
+.btn-fluor.color-purple{
+    background: #6e0dd0;
+}
+.btn-fluor-border{
+    background: transparent;
+    border: 3px solid;
+}
+.btn-fluor-border.color-blue{
+    border-color: #45f3ff;
+    color: #45f3ff;
+}
+.btn-fluor-border.color-green{
+    border-color: #83f52c;
+    color: #83f52c;
+}
+.btn-fluor-border.color-red{
+    border-color: #fd1c03;
+    color: #fd1c03;
+}
+.btn-fluor-border.color-yellow{
+    border-color: #f3f315;
+    color: #f3f315;
+}
+.btn-fluor-border.color-pink{
+    border-color: #ff0099;
+    color: #ff0099;
+}
+.btn-fluor-border.color-orange{
+    border-color: #ff6000;
+    color: #ff6000;
+}
+.btn-fluor-border.color-purple{
+    border-color: #6e0dd0;
+    color: #6e0dd0;
+}
+
+/* Neon */
+.btn-neon{
+    border: none;
+    transition: box-shadow 400ms;
+}
+.btn-neon.color-green{
+    background: #83f52c;
+    box-shadow: 0 0 10px #83f52c, 0 0 20px #83f52c inset, 0 0 20px #83f52c, 0 0 10px #83f52c inset;
+}
+.btn-neon.color-green:hover{
+    box-shadow: 0 0 15px #83f52c, 0 0 25px #83f52c inset, 0 0 25px #83f52c, 0 0 15px #83f52c inset;  
+}
+.btn-neon.color-blue{
+    background: #45f3ff;
+    box-shadow: 0 0 10px #45f3ff, 0 0 20px #45f3ff inset, 0 0 20px #45f3ff, 0 0 10px #45f3ff inset;
+}
+.btn-neon.color-blue:hover{
+    box-shadow: 0 0 15px #45f3ff, 0 0 25px #45f3ff inset, 0 0 25px #45f3ff, 0 0 15px #45f3ff inset;
+}
+.btn-neon.color-red{
+    background: #fd1c03;
+    box-shadow: 0 0 10px #fd1c03, 0 0 20px #fd1c03 inset, 0 0 20px #fd1c03, 0 0 10px #fd1c03 inset;
+}
+.btn-neon.color-red:hover{
+    box-shadow: 0 0 15px #fd1c03, 0 0 25px #fd1c03 inset, 0 0 25px #fd1c03, 0 0 15px #fd1c03 inset;
+}
+.btn-neon.color-yellow{
+    background: #f3f315;
+    box-shadow: 0 0 10px #f3f315, 0 0 20px #f3f315 inset, 0 0 20px #f3f315, 0 0 10px #f3f315 inset;
+}
+.btn-neon.color-yellow:hover{
+    box-shadow: 0 0 15px #f3f315, 0 0 25px #f3f315 inset, 0 0 25px #f3f315, 0 0 15px #f3f315 inset;
+}
+.btn-neon.color-pink{
+    background: #ff0099;
+    box-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099 inset, 0 0 20px #ff0099, 0 0 10px #ff0099 inset;
+}
+.btn-neon.color-pink:hover{
+    box-shadow: 0 0 15px #ff0099, 0 0 25px #ff0099 inset, 0 0 25px #ff0099, 0 0 15px #ff0099 inset;
+}
+.btn-neon.color-orange{
+    background: #ff6000;
+    box-shadow: 0 0 10px #ff6000, 0 0 20px #ff6000 inset, 0 0 20px #ff6000, 0 0 10px #ff6000 inset;
+}
+.btn-neon.color-orange:hover{
+    box-shadow: 0 0 15px #ff6000, 0 0 25px #ff6000 inset, 0 0 25px #ff6000, 0 0 15px #ff6000 inset;
+}
+.btn-neon.color-purple{
+    background: #6e0dd0;
+    box-shadow: 0 0 10px #6e0dd0, 0 0 20px #6e0dd0 inset, 0 0 20px #6e0dd0, 0 0 10px #6e0dd0 inset;
+}
+.btn-neon.color-purple:hover{
+    box-shadow: 0 0 15px #6e0dd0, 0 0 25px #6e0dd0 inset, 0 0 25px #6e0dd0, 0 0 15px #6e0dd0 inset;
+}
+
+.btn-neon-border {
+    background: transparent;
+    border: none;
+    transition: box-shadow 400ms;
+}
+.btn-neon-border.color-green {
+    box-shadow: 0 0 10px #83f52c, 0 0 10px 3px #83f52c inset;
+    color: #83f52c;
+}
+.btn-neon-border.color-green:hover{
+    box-shadow: 0 0 15px #83f52c, 0 0 15px 3px #83f52c inset;
+}
+.btn-neon-border.color-blue{
+    box-shadow: 0 0 10px #45f3ff, 0 0 10px 3px #45f3ff inset;
+    color: #45f3ff;
+}
+.btn-neon-border.color-blue:hover{
+    box-shadow: 0 0 15px #45f3ff, 0 0 15px 3px #45f3ff inset;
+}
+.btn-neon-border.color-red{
+    box-shadow: 0 0 10px #fd1c03, 0 0 10px 3px #fd1c03 inset;
+    color: #fd1c03;
+}
+.btn-neon-border.color-red:hover{
+    box-shadow: 0 0 15px #fd1c03, 0 0 15px 3px #fd1c03 inset;
+}
+.btn-neon-border.color-yellow{
+    box-shadow: 0 0 10px #f3f315, 0 0 10px 3px #f3f315 inset;
+    color: #f3f315;
+}
+.btn-neon-border.color-yellow:hover{
+    box-shadow: 0 0 15px #f3f315, 0 0 15px 3px #f3f315 inset;
+}
+.btn-neon-border.color-pink{
+    box-shadow: 0 0 10px #ff0099, 0 0 10px 3px #ff0099 inset;
+    color: #ff0099;
+}
+.btn-neon-border.color-pink:hover{
+    box-shadow: 0 0 15px #ff0099, 0 0 15px 3px #ff0099 inset;
+}
+.btn-neon-border.color-orange{
+    box-shadow: 0 0 10px #ff6000, 0 0 10px 3px #ff6000 inset;
+    color: #ff6000;
+}
+.btn-neon-border.color-orange:hover{
+    box-shadow: 0 0 15px #ff6000, 0 0 15px 3px #ff6000 inset;
+}
+.btn-neon-border.color-purple{
+    box-shadow: 0 0 10px #6e0dd0, 0 0 10px 3px #6e0dd0 inset;
+    color: #6e0dd0;
+}
+.btn-neon-border.color-purple:hover{
+    box-shadow: 0 0 15px #6e0dd0, 0 0 15px 3px #6e0dd0 inset;
+}
+
+/* Move hover */
+.btn-move-hover{
+    background: none;
+    border: 4px solid;
+    border-radius: 0;
+    cursor: pointer;
+    position: relative;
+}
+.btn-move-hover::before, .btn-move-hover::after{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    background-color: gray;
+    transform: skewX(50deg);
+    transition: .4s linear;
+    z-index: 100;
+}
+.btn-move-hover::before{
+    top: -4px;
+    left: 10%;
+}
+.btn-move-hover::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-move-hover:hover::before{
+    left: 80%;
+}
+.btn-move-hover:hover::after{
+    right: 80%;
+}
+
+.btn-move-hover.color-green{
+    color: #83f52c;
+}
+.btn-move-hover.color-blue{
+    color: #45f3ff;
+}
+.btn-move-hover.color-red{
+    color: #fd1c03;
+}
+.btn-move-hover.color-yellow{
+    color: #f3f315;
+}
+.btn-move-hover.color-pink{
+    color: #ff0099;
+}
+.btn-move-hover.color-orange{
+    color: #ff6000;
+}
+.btn-move-hover.color-purple{
+    color: #6e0dd0;
+}
+
+/* Neon Reflex */
+.btn-neon-reflex{
+    color: #000;
+    border: none; 
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); 
+    margin: 30px 0;
+}
+.btn-neon-reflex.color-green{
+    background: #83f52c;
+}
+.btn-neon-reflex.color-green:hover{
+    color: #000;
+    box-shadow: 0 0 5px #83f52c,
+    0 0 25px #83f52c,
+    0 0 50px #83f52c;
+}
+.btn-neon-reflex.color-blue{
+    background: #45f3ff;
+}
+.btn-neon-reflex.color-blue:hover{
+    background: #45f3ff;
+    box-shadow: 0 0 5px #45f3ff,
+    0 0 25px #45f3ff,
+    0 0 50px #45f3ff;
+}
+.btn-neon-reflex.color-red{
+    background: #fd1c03;
+}
+.btn-neon-reflex.color-red:hover{
+    background: #fd1c03;
+    box-shadow: 0 0 5px #fd1c03,
+    0 0 25px #fd1c03,
+    0 0 50px #fd1c03;
+}
+.btn-neon-reflex.color-yellow{
+    background: #f3f315;
+}
+.btn-neon-reflex.color-yellow:hover{
+    background: #f3f315;
+    box-shadow: 0 0 5px #f3f315,
+    0 0 25px #f3f315,
+    0 0 50px #f3f315;
+}
+.btn-neon-reflex.color-pink{
+    background: #ff0099;
+}
+.btn-neon-reflex.color-pink:hover{
+    background: #ff0099;
+    box-shadow: 0 0 5px #ff0099,
+    0 0 25px #ff0099,
+    0 0 50px #ff0099;
+}
+.btn-neon-reflex.color-orange{
+    background: #ff6000;
+}
+.btn-neon-reflex.color-orange:hover{
+    background: #ff6000;
+    box-shadow: 0 0 5px #ff6000,
+    0 0 25px #ff6000,
+    0 0 50px #ff6000;
+}
+.btn-neon-reflex.color-purple{
+    background: #6e0dd0;
+}
+.btn-neon-reflex.color-purple:hover{
+    background: #6e0dd0;
+    box-shadow: 0 0 5px #6e0dd0,
+    0 0 25px #6e0dd0,
+    0 0 50px #6e0dd0;
+}
+/* Neon Reflex Text */
+.btn-neon-reflex-text{
+    background: transparent;
+    border: none; 
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); 
+}
+.btn-neon-reflex-text.color-green{
+    color:#83f52c;
+}
+.btn-neon-reflex-text.color-green:hover{
+    text-shadow: 0 0 5px #83f52c,
+    0 0 25px #83f52c,
+    0 0 50px #83f52c;
+}
+.btn-neon-reflex-text.color-blue{
+    color: #45f3ff;
+}
+.btn-neon-reflex-text.color-blue:hover{
+    text-shadow: 0 0 5px #45f3ff,
+    0 0 25px #45f3ff,
+    0 0 50px #45f3ff;
+}
+.btn-neon-reflex-text.color-red{
+    color: #fd1c03;
+}
+.btn-neon-reflex-text.color-red:hover{
+    text-shadow: 0 0 5px #fd1c03,
+    0 0 25px #fd1c03,
+    0 0 50px #fd1c03;
+}
+.btn-neon-reflex-text.color-yellow{
+    color: #f3f315;
+}
+.btn-neon-reflex-text.color-yellow:hover{
+    text-shadow: 0 0 5px #f3f315,
+    0 0 25px #f3f315,
+    0 0 50px #f3f315;
+}
+.btn-neon-reflex-text.color-pink{
+    color: #ff0099;
+}
+.btn-neon-reflex-text.color-pink:hover{
+    text-shadow: 0 0 5px #ff0099,
+    0 0 25px #ff0099,
+    0 0 50px #ff0099;
+}
+.btn-neon-reflex-text.color-orange{
+    color: #ff6000;
+}
+.btn-neon-reflex-text.color-orange:hover{
+    text-shadow: 0 0 5px #ff6000,
+    0 0 25px #ff6000,
+    0 0 50px #ff6000;
+}
+.btn-neon-reflex-text.color-purple{
+    color: #6e0dd0;
+}
+.btn-neon-reflex-text.color-purple:hover{
+    text-shadow: 0 0 5px #6e0dd0,
+    0 0 25px #6e0dd0,
+    0 0 50px #6e0dd0;
+}
+
+/* Input */
+
+.input-neon{
+    border: none;
+    transition: box-shadow 400ms;
+}
+.input-neon.color-green{
+    background: #83f52c;
+    box-shadow: 0 0 10px #83f52c, 0 0 20px #83f52c inset;
+}
+.input-neon.color-green:hover{
+    box-shadow: 0 0 15px #83f52c, 0 0 25px #83f52c inset;  
+}
+.input-neon.color-blue{
+    background: #45f3ff;
+    box-shadow: 0 0 10px #45f3ff, 0 0 20px #45f3ff inset;
+}
+.input-neon.color-blue:hover{
+    box-shadow: 0 0 15px #45f3ff, 0 0 25px #45f3ff inset;
+}
+.input-neon.color-red{
+    background: #fd1c03;
+    box-shadow: 0 0 10px #fd1c03, 0 0 20px #fd1c03 inset;
+}
+.input-neon.color-red:hover{
+    box-shadow: 0 0 15px #fd1c03, 0 0 25px #fd1c03 inset;
+}
+.input-neon.color-yellow{
+    background: #f3f315;
+    box-shadow: 0 0 10px #f3f315, 0 0 20px #f3f315 inset;
+}
+.input-neon.color-yellow:hover{
+    box-shadow: 0 0 15px #f3f315, 0 0 25px #f3f315 inset;
+}
+.input-neon.color-pink{
+    background: #ff0099;
+    box-shadow: 0 0 10px #ff0099, 0 0 20px #ff0099 inset;
+}
+.input-neon.color-pink:hover{
+    box-shadow: 0 0 15px #ff0099, 0 0 25px #ff0099 inset;
+}
+.input-neon.color-orange{
+    background: #ff6000;
+    box-shadow: 0 0 10px #ff6000, 0 0 20px #ff6000 inset;
+}
+.input-neon.color-orange:hover{
+    box-shadow: 0 0 15px #ff6000, 0 0 25px #ff6000 inset;
+}
+.input-neon.color-purple{
+    background: #6e0dd0;
+    box-shadow: 0 0 10px #6e0dd0, 0 0 20px #6e0dd0 inset;
+}
+.input-neon.color-purple:hover{
+    box-shadow: 0 0 15px #6e0dd0, 0 0 25px #6e0dd0 inset;
+}
+
+.input-neon-border{
+    background: transparent;
+    border: none;
+}
+.input-neon-border.color-green{
+    color: #83f52c;
+    border-bottom: 2px solid #83f52c; 
+}
+.input-neon-border.color-blue{
+    color: #45f3ff;
+    border-bottom: 2px solid #45f3ff; 
+}
+.input-neon-border.color-red{
+    color: #fd1c03;
+    border-bottom: 2px solid #fd1c03;  
+}
+.input-neon-border.color-yellow{
+    color: #f3f315;
+    border-bottom: 2px solid #f3f315;
+}
+.input-neon-border.color-pink{
+    color: #ff0099;
+    border-bottom: 2px solid #ff0099; 
+}
+.input-neon-border.color-orange{
+    color: #ff6000;
+    border-bottom: 2px solid #ff6000; 
+}
+.input-neon-border.color-purple{
+    color: #6e0dd0;
+    border-bottom: 2px solid #6e0dd0; 
+}
