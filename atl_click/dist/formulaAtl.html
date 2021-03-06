@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162039946-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-162039946-1');
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+    <body>
+        <div class="all formula">
+                <div class="menu">
+                        <button onclick="reload()">&#8678;</button>
+                    <a href="../index.html"><button>&#8682;</button></a>
+                </div>
+        <div class="container">
+        <div class="addteams">
+            <br>
+            <div class="selectLeague">
+            <select name="" id="select" class="select_input">
+               <option value="">Select League</option>
+                <option value="self">Your Teams</option>
+                <option value="f12020">F1 2020</option>
+
+            </select>
+        </div>
+        
+    
+            <div class="showTeam"></div>
+    
+        </div>
+    
+        <div class="game">
+                <div class="change-box change-table"><button class="tablechange">Table</button></div> 
+                 <div class="schedule-box">
+                     <div class="box-title">GRAND PRIX</div>  
+             <div class="button"></div>
+             <table class="schedule">
+                 
+     
+             </table>
+         </div>
+         <div class="change-box change-schedule"><button class="schedulechange">Schedule</button></div> 
+         <div class="tablesort-box">
+                 <div class="box-title">TABLE</div> 
+         <div class="tablesort"></div>
+         </div>
+         </div>
+    
+    
+    </div>
+    <div class="logo">
+        <h1>&copy; AR GAMES 2020</h1>
+    </div>
+
+</div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="src/formula.js"></script>
+
+<script>
+  $(".tablechange").click(function(){
+    $(".tablesort-box").addClass("change");
+    $(".schedule-box").addClass("change");
+    $(".change-table").addClass("change");
+    $(".change-schedule").addClass("change");
+  });
+  $(".schedulechange").click(function(){
+    $(".tablesort-box").removeClass("change");
+    $(".schedule-box").removeClass("change");
+    $(".change-table").removeClass("change");
+    $(".change-schedule").removeClass("change");
+  });
+</script>
+
+
+</body>
+</html>

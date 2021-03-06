@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162039946-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-162039946-1');
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Symulator rozgrywek sportowych. Symulator piłki nożnej.">
+    <title>ClickScore - Football</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/clickscore16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/clickscore32.png">
+    <link rel="stylesheet" href="../style.css">
+</head>
+    <body>
+        <div class="all football">
+
+                
+          <div class="menu">
+            <button onclick="reload()">&#8678;</button>
+        <a href="../index.html"><button>&#8682;</button></a>
+        <div class="info-title">
+                <button class="info">?</button>
+            </div>
+        
+    </div>
+    <div class="info_box">
+            ABC ClickScore <br>
+            <select name="" id="select_faq" class="select_input">
+                <option value="">Dział</option>
+                <option value="faq_ligi">Wybór Lig</option>
+                <option value="faq_yourL">Twoja liga</option>
+                <option value="faq_skills">Skille</option>
+                <option value="faq_plays">Rozgrywki ligowe</option>
+                <option value="faq_cups">Puchary</option>
+                <option value="faq_playoff">Play-Off</option>  
+
+        </select> <br>
+        <div class="faq_expl">Symulator piłki nożnej w którym symulujesz wyniki ulubionych lig piłkarskich lub pucharów. <br>Kliknij w opcje Dział aby dowiedzieć się więcej. </div>  
+            <br>
+            <button class="info2">X</button><br>
+        </div>
+        <div class="container">
+        <div class="addteams">
+            <br>
+            <div class="selectLeague">
+                    <select name="" id="select" class="select_input">
+                            <option value="">Select League</option>
+                             <option value="self">Your Teams</option>
+                             <option value="eng">England</option>
+                             <option value="pol">Poland</option>
+                             <option value="ita">Italy</option>
+                             <option value="spa">Spain</option>
+                             <option value="fra">France</option>
+                             <option value="sup">Super League</option>
+                             <option value="cl">Champions League</option>
+                             <option value="wc">World Cup</option>
+                             <option value="euro">Euro Nation League</option>
+                             <option value="ame">America Cup</option>
+                    </select>
+        </div>
+        
+    
+            <div class="showTeam"></div>
+    
+        </div>
+        
+        <div class="game">
+               <div class="change-box change-table"><button class="tablechange">Table</button></div> 
+                <div class="schedule-box">
+                    <div class="box-title">SCHEDULE</div>  
+            <div class="button"></div>
+            <table class="schedule">
+                
+    
+            </table>
+        </div>
+        <div class="change-box change-schedule"><button class="schedulechange">Schedule</button></div> 
+        <div class="tablesort-box">
+                <div class="box-title">TABLE</div> 
+        <div class="tablesort"></div>
+        </div>
+        </div>
+    
+    
+    </div>
+    <div class="logo">
+        <h1>&copy; AR GAMES 2020</h1>
+    </div>
+
+</div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous"></script>
+<script src="src/start.js"></script>
+    <script src="src/football.js"></script>
+
+    <script>
+        const info = document.querySelector('.info');
+        const infoTitle = document.querySelector('.info-title');
+        const info2 = document.querySelector('.info2');
+        const info_box = document.querySelector('.info_box');
+        info.addEventListener('click', () =>{
+            info_box.classList.toggle('open');
+            infoTitle.classList.toggle('open');
+        })
+        info2.addEventListener('click', () =>{
+            info_box.classList.toggle('open');
+            infoTitle.classList.toggle('open');
+        })
+        </script>
+
+</body>
+</html>

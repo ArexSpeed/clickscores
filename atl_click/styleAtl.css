@@ -1,0 +1,1059 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaina+2&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+body{
+    font-family: 'Baloo Bhaina 2', cursive, sans-serif;
+}
+.all{
+    background: linear-gradient(60deg, rgba(23, 12, 49), rgb(5, 10, 80));
+    min-height: 100vh;
+    color: #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.all.basket{
+    background: linear-gradient(60deg, rgb(49, 12, 12), rgb(80, 5, 5));
+    color: #fff;
+}
+.all.speedway{
+    background: linear-gradient(60deg, rgb(12, 12, 12), rgb(25, 23, 26));
+    color: #fff;
+}
+.all.volley{
+    background: linear-gradient(60deg, rgb(12, 49, 18), rgb(5, 80, 27));
+    color: #fff;
+}
+.all.handball{
+    background: linear-gradient(60deg, rgb(43, 12, 49), rgb(80, 5, 61));
+    color: #fff;
+}
+.all.formula{
+    background: linear-gradient(60deg, rgb(49, 13, 12), rgb(80, 10, 5));
+    color: #fff;
+}
+
+.container{
+    width: 85vw;
+    height: 70vh;
+    border: none;
+    border-radius: 50px;
+    display: flex;
+    padding: 20px;
+    background: linear-gradient(60deg, rgb(67, 10, 201), rgb(3, 19, 236));
+    box-shadow: 
+      1px 5px 15px rgba(10, 32, 158, 0.8),
+      inset 1px 5px 15px rgba(5, 19, 94, 0.8),
+      0 5px 30px rgba(0,0,0, 0.9);  
+      /* border: 2px solid rgb(3, 5, 121);*/
+      -webkit-box-reflect: below 2px linear-gradient(transparent, #0005); 
+      overflow: hidden;
+
+}
+
+.basket .container{
+    background: linear-gradient(60deg, rgb(201, 125, 10), rgb(236, 135, 3));
+    box-shadow: 
+      1px 0px 1px rgba(158, 119, 10, 0.8),
+      inset 1px 0px 1px rgb(80, 5, 5),
+      0 5px 10px rgba(0,0,0, 0.9); 
+}
+.speedway .container{
+    background: linear-gradient(60deg, rgb(27, 25, 20), rgb(65, 63, 66));
+    box-shadow: 
+      5px 5px 0px rgba(65, 63, 66,.8),
+      inset 5px 5px 0px rgb(10, 10, 10),
+      0 5px 30px rgba(0,0,0, 0.9); 
+}
+.hockey .container{
+    background: linear-gradient(60deg, rgb(161, 212, 221), rgb(114, 188, 211));
+    box-shadow: 
+    1px 5px 15px rgba(10, 32, 158, 0.8),
+    inset 1px 5px 15px rgba(5, 19, 94, 0.8),
+    0 5px 30px rgba(0,0,0, 0.9);  
+}
+.volley .container{
+    background: linear-gradient(60deg, rgb(10, 201, 58), rgb(2, 153, 10));
+    box-shadow: 
+      1px 0px 1px rgba(22, 158, 10, 0.8),
+      inset 1px 0px 1px rgb(5, 80, 11),
+      0 5px 10px rgba(0,0,0, 0.9);  
+}
+.handball .container{
+    background: linear-gradient(60deg, rgb(125, 10, 201), rgb(118, 2, 153));
+    box-shadow: 
+      1px 0px 1px rgba(146, 10, 158, 0.8),
+      inset 1px 0px 1px rgb(65, 5, 80),
+      0 5px 10px rgba(0,0,0, 0.9);  
+}
+.formula .container{
+    background: linear-gradient(60deg, rgb(201, 16, 10), rgb(153, 2, 15));
+    box-shadow: 
+      1px 0px 1px rgba(158, 10, 10, 0.8),
+      inset 1px 0px 1px rgb(80, 5, 5),
+      0 5px 10px rgba(0,0,0, 0.9);  
+}
+.logo{
+    opacity: 0.15;
+    transform: rotate(180deg);
+}
+.speedway .logo, .basket .logo, .handball .logo{
+    opacity: 0.05;
+}
+.formula .logo{
+    color: #000;
+}
+.logo h6{
+    padding: 0;
+    margin-top: -20px;
+    transform: rotate(180deg);
+    text-align: right;
+    opacity: 0.9
+}
+.info-title{
+    text-align:center;
+    width: 200px;
+    font-size: 15px;
+    color: rgba(5, 19, 94,1);
+    position: relative;
+    background: #21ebff;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 
+    0 0px 10px rgba(0,0,0, 0.9);
+
+}
+.info-title:hover{
+    box-shadow: 
+    inset 0 0px 10px rgba(0,0,0, 0.9);
+}
+.info-title button{
+    width: 100%;
+    height: 100%;
+    padding: 7px 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.info_box .info2{
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    background: #21ebff;
+    color: rgba(5, 19, 94,1);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.info_box{
+    /* transition: opacity 1s ease-out, transform 1s; */
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(300px);
+}
+.info_box.open{
+    display: block;
+    width: 85vw;
+    border: groove 4px #21ebff;
+    text-align: center;
+    color: #21ebff;
+    box-shadow: 
+    0 0px 10px rgba(0,0,0, 0.9);
+    margin-bottom: 10px;
+    border-radius: 50px;    opacity: 1;
+    height: auto;
+    transform: translateY(0);
+}
+
+
+.menu{
+    background: transparent;
+    color: #21ebff;
+    font-family: 'Baloo Bhaina 2', cursive, sans-serif;
+    margin: 0 auto;
+    display: flex;
+}
+.menu a{
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 100px;
+}
+.menu button{
+    background: transparent;
+    color: #21ebff;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.speedway .menu, .speedway .menu button{
+    color: #ddd;
+}
+.basket .menu, .basket .menu button{
+    color: #f3f315;
+}
+.hockey .menu, .hockey .menu button{
+    color: #ddd;
+}
+.volley .menu, .volley .menu button{
+    color: #f0473b;
+}
+.handball .menu, .handball .menu button{
+    color: #bd3bf0;
+}
+.formula .menu, .formula .menu button{
+    color: #c9100a;
+}
+
+/* .container:hover{
+    box-shadow: 
+      inset 1px 5px 15px rgba(10, 32, 158, 0.8),
+       1px 5px 15px rgba(5, 19, 94, 0.8),
+      inset 0 5px 30px rgba(0,0,0, 0.9); 
+} */
+/* Toggle */
+.addteams{
+    width: 100%;
+    overflow: auto;
+    visibility: visible;
+  }
+.addteams.toggle{
+    width: 0;
+    visibility: hidden;
+    transition: 1s;
+  }
+.game{
+    width: 0;
+    visibility: hidden;
+  }
+.game.toggle{
+    width: 100%;
+    visibility: visible;
+    transition: 1s;
+  }
+
+
+.game{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0px;
+    justify-content: center;
+}
+.game .schedule-box{
+    overflow: auto;
+    flex: 1;
+    margin-right: 10px;
+    border-radius: 50px;
+    box-shadow: 
+      inset 0 0 10px rgba(0,0,0, 0.3); 
+}
+.game .schedule-box:hover{
+    box-shadow: 
+       0 0 10px rgba(0,0,0, 0.3);
+}
+.btn_start{
+    width: 200px;
+    height: 50px;
+    left: 40%;
+    transform: translateX(-40%);
+}
+.accept{
+    width: 200px;
+    height: 50px;
+    top: 20px;
+}
+.play_button{
+    font-size: 18px;
+}
+.btn_effect{
+    position: relative;
+    padding: 10px 30px;
+    margin: 0 15px;
+    color: inherit;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    overflow: hidden;
+    color: #21ebff;
+    cursor: pointer;
+}
+.basket .btn_effect{
+    color: #f3f315;
+}
+.speedway .btn_effect{
+    color: #ddd;
+}
+.hockey .btn_effect{
+    color: #0a209e;
+}
+.volley .btn_effect{
+    color: #f0473b;
+}
+.handball .btn_effect{
+    color: #bd3bf0;
+}
+.formula .menu, .formula .btn_effect{
+    color: #0a0201;
+}
+.play_button.btn_effect{
+    position: relative;
+    padding: 5px 20px;
+}
+.btn_effect:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-color: inherit;
+    transition: 0.25s;
+}
+    .btn_effect:hover{
+    background: #21ebff;
+    color: #111;
+    box-shadow: 0 0 30px #21ebff;
+    transition-delay: 0.25s;
+} 
+.basket .btn_effect:hover{
+    background: #f3f315;
+    box-shadow: 0 0 30px #f3f315;
+}
+.speedway .btn_effect:hover{
+    background: #ddd;
+    box-shadow: 0 0 30px #ddd;
+    color: #050505;
+}
+.hockey .btn_effect:hover{
+    background: #0a209e;;
+    box-shadow: 0 0 30px #0a209e;;
+    color: #ddd;
+}
+.volley .btn_effect:hover{
+    background: #f0473b;
+    box-shadow: 0 0 30px #f0473b;
+    color: #111;
+}
+.handball .btn_effect:hover{
+    background: #cc3bf0;
+    box-shadow: 0 0 30px #cc3bf0;
+    color: #111;
+}
+.formula .btn_effect:hover{
+    background: #0a0201;
+    box-shadow: 0 0 30px #0a0201;
+    color: #c9100a;
+}
+.btn_effect:hover:before{
+    width: 100%;
+    height: 100%;
+}
+.btn_effect:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    border-color: inherit;
+    transition: 0.25s;
+}
+.btn_effect:hover:after{
+    width: 100%;
+    height: 100%;
+}
+
+.box-title{
+    margin: auto;
+    text-align:center;
+    width: 200px;
+    font-size: 25px;
+    color: rgba(5, 19, 94,1);
+    position: relative;
+    margin-bottom: 20px;
+}
+.speedway .box-title, .hockey .box-title, .volley .box-title,.handball .box-title{
+    color: #fff;
+}
+.formula .box-title{
+    color: #c9100a;
+}
+.box-title:before{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    top: 0;
+    left: -30px;
+    transform: skewX(40deg);
+    background: #21ebff;
+    z-index: -1;
+    border-left: 4px groove white;
+    border-bottom: 4px groove white; 
+}
+.basket .box-title:before{
+    background: #f3f315;
+}
+.speedway .box-title:before{
+    background: #050505;
+}
+.hockey .box-title:before{
+    background: #0a209e;
+}
+.volley .box-title:before{
+    background: rgb(5, 80, 11);
+}
+.handball .box-title:before{
+    background: rgb(80, 5, 61);
+}
+.formula .box-title:before{
+    background: rgb(5, 5,5);
+}
+.box-title:after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    top: 0;
+    right: -30px;
+    transform: skewX(-40deg);
+    border-right: 4px groove white;
+    border-bottom: 4px groove white;
+    background: #21ebff;
+    z-index: -1;
+}
+.basket .box-title:after{
+    background: #f3f315;
+}
+.speedway .box-title:after{
+    background: #050505;
+}
+.hockey .box-title:after{
+    background: #0a209e;
+}
+.volley .box-title:after{
+    background: rgb(5, 80, 11);
+}
+.handball .box-title:after{
+    background: rgb(80, 5, 61);
+}
+.formula .box-title:after{
+    background: rgb(5, 5,5);
+}
+
+.change-box{
+    display: none;
+}
+.schedule{
+    margin: auto;
+    /* transform: translateY(-100%); */
+    z-index: 1;
+    font-size: 18px;
+}
+.schedule.toggle{
+    transform: translateY(0px);
+    /* transition: transform 3s; */
+}
+
+.game .tablesort-box{
+    overflow: auto;
+    flex: 1;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 50px;
+    box-shadow: 
+    0px 0px 15px rgba(0,0,0, 0.3), 
+       0px 0px 15px rgba(0,0,0, 0.3); 
+}
+
+
+
+/* inputs and selects */
+.selectLeague, .showTeam, .versus{
+    text-align: center;
+}
+.versus{
+    margin-top: 35px;
+}
+.select_input{
+    background:  rgba(23, 12, 49,.8);;
+    color: aqua;
+    border: none;
+    font-size: 20px;
+    font-family: 'Baloo Bhaina 2', cursive, sans-serif;
+    border-radius: 15px;
+    width: 300px;
+    height: 30px;
+    left: 50px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.basket .select_input{
+    background: rgba(49, 12, 12,.8);
+    color: #f3f315;
+}
+.speedway .select_input{
+    background: rgba(5, 5, 5,.8);
+    color: #ddd;
+}
+.hockey .select_input{
+    background: rgba(10, 32, 158,.8);
+    color: #ddd;
+}
+.volley .select_input{
+    background: rgb(5, 80, 11,.8);
+    color: #ddd;
+}
+.formula .select_input{
+    background: rgba(5,5,5, 0.8);
+    color: #c9100a;
+}
+.showTeam input, .versus input{
+    background: #170c31cc;
+    color: aqua;
+    border: none;
+    font-size: 20px;
+    font-family: 'Baloo Bhaina 2', cursive, sans-serif;
+    border-radius: 50px;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.basket .showTeam input, .basket .versus input{
+    background: rgba(49, 12, 12,.8);
+    color: #f3f315;
+}
+.speedway .showTeam input, .speedway .versus input{
+    background: rgba(5, 5, 5,.8);
+    color: #ddd;
+}
+.hockey .showTeam input, .hockey .versus input{
+    background: rgba(10, 32, 158,.8);
+    color: #ddd;
+}
+.volley .showTeam input, .volley .versus input{
+    background: rgb(5, 80, 11,.8);
+    color: #ddd;
+}
+.formula .showTeam input, .formula .versus input{
+    background: rgba(5,5,5, 0.8);
+    color: #c9100a;
+}
+.showTeam input[type="number"], .versus input[type="number"]{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+/* To One match */
+.point{
+    font-size: 30px;
+}
+.change_select{
+    background: transparent;
+    border: none;
+    font-size: inherit;
+}
+#ar.change_select{
+    color: red;
+}
+#br.change_select{
+    color:aqua;
+}
+#cr.change_select{
+    color:yellow;
+}
+#dr.change_select{
+    color:white;
+}
+
+/* Schedule table */
+table.schedule{
+    text-align: center;
+    font-size: 18px;
+}
+.schedule th{
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    background-color: rgba(10, 32, 158, 1);
+    color: white;
+    margin: 20px 0;
+}
+.basket .schedule th{
+    background-color:rgba(153, 96, 10,1);
+    
+}
+.speedway .schedule th{
+    background-color:rgba(5, 5, 5,.7); 
+}
+.hockey .schedule th{
+    background-color:rgba(250, 250, 250,.7); 
+    color: #0a209e;
+}
+.volley .schedule th{
+    background-color:rgb(5, 80, 11,.7); 
+    color: #ddd;
+}
+.handball .schedule th{
+    background-color: rgb(80, 5, 61,.7); 
+    color: #ddd;
+}
+.formula .schedule th{
+    background: rgba(5,5,5, 0.8);
+    color: #c9100a;
+}
+th.end_round{
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    background-color: rgba(10, 32, 158, .3);
+    color: rgba(10, 32, 158, 0);
+}
+.basket th.end_round{
+    background-color: rgba(153, 96, 10,.3);
+}
+.speedway th.end_round{
+    background-color: rgba(5, 5, 5,.3);
+}
+.hockey th.end_round{
+    background-color: rgba(250, 250, 250,.3);
+    color: rgba(250, 250, 250,0);
+}
+.volley th.end_round{
+    background-color: rgb(5, 80, 11,.3);
+    color: rgba(250, 250, 250,0);
+}
+.handball th.end_round{
+    background-color: rgb(80, 5, 61,.3); 
+    color: rgba(250, 250, 250,0);
+}
+.formula th.end_round{
+    background: rgba(5,5,5, 0.3);
+    color: rgba(250, 250, 250,0);
+}
+tr{
+    color: aqua;
+}
+
+.basket tr{
+    color: #f3f315;
+}
+.speedway tr{
+    color: #ddd;
+}
+.hockey tr{
+    color: #0a209e;
+}
+.volley tr{
+    color: #ddd;
+}
+.formula tr{
+
+    color: #050505;
+}
+.schedule td{
+    padding: 2px 4px;
+}
+.schedule tr:nth-child(even){
+    background: rgba(10, 32, 158, 1);
+}
+.basket .schedule tr:nth-child(even){
+    background: rgba(153, 96, 10,1);
+}
+.speedway .schedule tr:nth-child(even){
+    background: rgba(5, 5, 5,.7);
+}
+.hockey .schedule tr:nth-child(even){
+    background: rgba(250, 250, 250,.7);
+}
+.volley .schedule tr:nth-child(even){
+    background: rgb(5, 80, 11,.7);
+}
+.handball .schedule tr:nth-child(even){
+    background-color: rgb(80, 5, 61,.7); 
+}
+.formula .schedule tr:nth-child(even){
+    background: transparent;
+}
+.schedule tr:nth-child(odd){
+    background: transparent;
+}
+tr.group{
+    background-color: aqua !important;
+    color: #0a209e;
+}
+.basket tr.group{
+    background-color: #f3f315 !important;
+    color: #050505
+}
+.handball tr.group{
+    background-color: rgb(80, 5, 61) !important;
+    color: #fff
+}
+td.guest{
+    color: white;
+}
+.hockey td.guest{
+    color: #050505;
+}
+
+/* Tablesort table */
+.tablesort table{
+    margin: auto;
+    border: none;
+    box-shadow: 
+       1px 5px 25px rgba(10, 32, 158, 0.8);
+    border-radius: 10px 10px 0 0;
+}
+.basket .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgba(153, 96, 10,.8);
+}
+.speedway .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgba(5, 5, 5,.8);
+}
+.hockey .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgba(250, 250, 250,.8);
+}
+.volley .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgb(5, 80, 11,.8);
+}
+.handball .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgb(80, 5, 61,.8); 
+}
+.formula .tablesort table{
+    box-shadow: 
+    1px 5px 25px rgba(5,5,5, 0.8);
+}
+.tablesort th{
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    background-color: rgba(10, 32, 158, 1);
+    color:  rgba(10, 32, 158, 0);
+    margin: 20px 0;
+}
+.tablesort th.group{
+    color: #fff;
+}
+.basket .tablesort th{
+    background-color:rgba(153, 96, 10,1);
+}
+.speedway .tablesort th{
+    background-color:rgba(5, 5, 5,.7);
+}
+.hockey .tablesort th{
+    background-color:rgba(250, 250,250,.7);
+}
+.volley .tablesort th{
+    background-color:rgb(5, 80, 11,.7);
+}
+.handball .tablesort th{
+    background-color:rgb(80, 5, 61,.7);
+}
+.formula .tablesort th{
+    background-color:rgba(5,5,5, 0.7);
+}
+.tablesort td{
+    padding: 2px 4px;
+}
+.tablesort tr:nth-child(2){
+    color: rgba(255,255,255,.6);
+}
+.tablesort td:last-child{
+    font-weight: bold;
+}
+.tablesort tr:nth-child(3){
+    color: rgb(190, 255, 10);
+}
+.tablesort tr:nth-child(4){
+    color: rgb(235, 239, 241);
+}
+
+.tablesort tr:nth-last-child(1){
+    color: rgb(204, 14, 118);
+}
+/* SGP & One Match*/
+tr.red_hel{
+    color: red;
+}    tr.blue_hel{
+    color: aqua;
+}    tr.white_hel{
+    color: white;
+}    tr.yellow_hel{
+    color: yellow;
+}
+
+/* Table SGP & one match(Speedway) */
+input[type="number"].rider_nr{
+    color: red;
+}
+.tablesort tr.sgpf_tab{
+    color: rgb(190, 255, 10);
+}
+.tablesort tr.sgpl_tab{
+    color: rgb(235, 239, 241);
+}
+.tablesort tr.host_one-match:nth-child(odd){
+    color: red;
+}
+.tablesort tr.host_one-match:nth-child(even){
+    color: aqua;
+}
+.tablesort tr.guest_one-match:nth-child(odd){
+    color: yellow;
+}
+.tablesort tr.guest_one-match:nth-child(even){
+    color: white;
+}
+
+/* Main site */
+.sports-box{
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.choose-box{
+    min-width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    flex: 1;
+    text-align: center;
+    margin-left: 20px;
+    padding: 30px 5px;
+    border-radius: 50px;
+    box-shadow: 
+    0px 0px 15px rgba(0,0,0, 0.3), 
+       0px 0px 15px rgba(0,0,0, 0.3); 
+       position: relative;
+}
+.choose-box:hover{
+    box-shadow: 
+    inset 0px 0px 15px rgba(0,0,0, 0.3), 
+       inset 0px 0px 15px rgba(0,0,0, 0.3); 
+}
+
+.choose-box:nth-last-child{
+    margin-right: 40px;
+}
+.choose-box i{
+    font-size: 150px;
+    color: rgba(10, 32, 158, 1);;
+}
+.choose-box:hover i{
+    transform: rotate(360deg);
+    color: aqua;
+    transition: all 1s;
+}
+.choose-box:nth-child(2):hover i{
+    transform: rotate(-30deg);
+    color: aqua;
+    transition: 1s;
+}
+.choose-box:nth-child(5):hover i{
+    transform: rotateY(360deg);
+    color: aqua;
+    transition: 1s;
+}
+.choose-box p{
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1075px){
+    .container{
+        width: 95vw;
+    }
+}
+@media screen and (max-height: 650px){
+    .container{
+        min-height: 95vh;
+    }
+}
+@media screen and (max-width: 950px){
+    .box-title{
+        margin: auto;
+        text-align:center;
+        width: 150px;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 15px;
+    }
+    table.schedule, .tablesort{
+        font-size: 15px;
+    }
+    .play_button{
+        font-size: 13px;
+    }
+    
+
+    
+}
+
+@media screen and (max-width: 850px){
+    .tablesort td:nth-child(3), .tablesort td:nth-child(4), .tablesort td:nth-child(5), .tablesort td:nth-child(6), .tablesort td:nth-child(7),.tablesort td:nth-child(8){
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 765px){
+    .container{
+        height: auto;
+        min-height: 95vh;
+    }
+ .game {
+     flex-direction: column;
+ }
+ .game .schedule-box{
+     max-height: 350px;
+     margin-right: 0;
+     margin-bottom: 5px;
+ }
+ .game .tablesort-box{
+    max-height: 350px;
+    margin-left: 0;
+    margin-top: 5px;
+}
+}
+@media (orientation: portrait) and (max-height: 1000px){
+    .container{
+        max-height: 1200px;
+    }
+    .sports-box{
+        flex-direction: column;
+    }
+    .choose-box{
+        margin: 8px;
+        min-width: 180px;
+    }
+    .change-box{
+        display: block;
+        margin: 0 auto;
+    }
+    .change-box button{
+        width: 100px;
+        height: 20px;
+        background: aqua;
+        color: black;
+        border-radius: 20px 20px 0 0;
+    }
+    .basket .change-box button{
+        background: #f3f315;
+        color: rgba(5, 19, 94,1);
+    }
+    .speedway .change-box button{
+        background: #050505;
+        color: #fff;
+    }
+    .hockey .change-box button{
+        background: #0a209e;
+        color: #fff;
+    }
+    .volley .change-box button{
+        background: rgb(5, 80, 11);
+        color: #fff;
+    }
+    .handball .change-box button{
+        background: rgb(80, 5, 61);
+        color: #fff;
+    }
+    .formula .change-box button{
+        background: rgb(5, 5,5);
+        color: #c9100a;
+    }
+    .change-table{
+        display: block;
+    }
+    .change-schedule{
+        display: none
+    }
+    .change-table.change{
+        display: none;
+    }
+    .change-schedule.change{
+        display: block;
+    }
+
+ .game {
+     flex-direction: column;
+ }
+ .game .schedule-box{
+     max-height: 350px;
+     margin-right: 0;
+     margin-bottom: 5px;
+     display: block;
+ }
+ .game .tablesort-box{
+    max-height: 350px;
+    margin-left: 0;
+    margin-top: 5px;
+    display: none;
+}
+.game .schedule-box.change{
+    display: none;
+}
+.game .tablesort-box.change{
+    display: block;
+}
+}
+@media (orientation: portrait) and (min-height: 550px){
+    .container{
+        min-height: 95vh;
+    }
+    .game .schedule-box{
+        min-height: 550px;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .game .tablesort-box{
+       min-height: 550px;
+       margin-left: 0;
+       margin-top: 5px;
+   }
+}
+@media screen and (max-width: 400px){
+    .game .schedule-box, .game .tablesort-box{
+        border-radius: 20px;
+    }
+    .box-title{
+        width: 100px;
+        font-size: 13px;
+        position: relative;
+        margin-bottom: 10px;
+    }
+    .box-title:before{
+        left: -10px;
+
+    }
+    .box-title:after{
+        right: -10px;
+    }
+    table.schedule, .tablesort{
+        font-size: 10px;
+    }
+    .play_button{
+        font-size: 10px;
+    }
+}
