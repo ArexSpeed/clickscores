@@ -1,3 +1,14 @@
+:root{
+  --bg-primary: linear-gradient(90deg, rgba(77, 83, 93, 0.5) 0%, rgba(55, 54, 72, 0.5) 95.25%);
+  --bg-secondary: rgba(196, 196, 196, 0.5);
+  --bg-third: linear-gradient(90deg, rgba(113, 158, 234, 0.5) 0%, rgba(153, 148, 238, 0.5) 95.25%);
+  --bg-green: linear-gradient(180deg, #63E636 18%, #1EAD24 100%);
+  --bg-red: linear-gradient(180deg, #E63636 18%, #ED5E3E 100%);
+  --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-inset: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --font-family: 'Baloo 2', cursive;
+}
+
 .main{
   display: flex;
   flex-direction: column;
@@ -27,9 +38,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: linear-gradient(90deg, rgba(77, 83, 93, 0.5) 0%, rgba(55, 54, 72, 0.5) 95.25%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--bg-primary);
+  box-shadow: var(--shadow);
   border-radius: 10px;
+}
+.selector-pooling{
+  width: 200px;
 }
 .selector-button{
   background: transparent;
@@ -38,12 +52,14 @@
   height: 40px;
   width: 45%;
   font-size: 24px;
-  font-family: 'Baloo 2', cursive;
+  font-family: var(--font-family);
   color: #fff;
+  font-weight: bold;
+  cursor: pointer;
 }
 .selector-button.active{
-  background: rgba(196, 196, 196, 0.5);
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--bg-secondary);
+box-shadow: var(--shadow-inset);
 border-radius: 10px;
 }
 .input-group{
@@ -61,14 +77,126 @@ border-radius: 10px;
   text-align: center;
   border: none;
   color: #fff;
-  background: linear-gradient(90deg, rgba(77, 83, 93, 0.5) 0%, rgba(55, 54, 72, 0.5) 95.25%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: var(--bg-primary);
+  box-shadow: var(--shadow);
   border-radius: 50px;
   font-size: 24px;
-  font-family: 'Baloo 2', cursive;
+  font-family: var(--font-family);
 }
 .input::placeholder{
   color: #aaaaaa;
   font-size: 20px;
+}
+/* Buttons accept */
+.button-accept{
+  width: 100px;
+  height: 50px;
+  margin: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: var(--font-family);
+  background: var(--bg-green);
+  box-shadow: var(--shadow);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.button-accept.cancel{
+  background: var(--bg-red);
+}
+
+/* Groups qty buttons */
+.button-gr{
+  height: 50px;
+  width: 50px;
+  font-size: 24px;
   font-family: 'Baloo 2', cursive;
+  background: linear-gradient(90deg, rgba(77, 83, 93, 0.5) 0%, rgba(55, 54, 72, 0.5) 95.25%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+.button-gr:nth-child(1){
+  border-radius: 10px 0 0 10px;
+}
+.button-gr:last-child{
+  border-radius: 0 10px 10px 0;
+}
+
+/* Group table */
+.tables{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 10px auto;
+}
+.table-title{
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  background: var(--bg-third);
+  border-radius: 10px 10px 0 0;
+}
+.table-input{
+  height: 50px;
+  width: 300px;
+  font-size: 24px;
+  font-family: var(--font-family);
+  margin-bottom: 1px;
+  text-align: center;
+  border:none;
+  background: var(--bg-primary);
+  color: #fff;
+}
+.table-input.last{
+  border-radius: 0 0 10px 10px;
+}
+.table-input.light{
+  background: var(--bg-secondary);
+}
+
+/* Schedule */
+.table-vs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+  margin-bottom: 1px;
+  
+}
+
+.table-host{
+  flex: 1;
+  background: var(--bg-primary);
+}
+
+.table-host.last{
+  border-radius: 0 0 0 10px;
+}
+.table-guest{
+  flex: 1;
+  background: var(--bg-secondary);
+}
+.table-guest div{
+  height: 100%;
+}
+.table-guest.last{
+  border-radius: 0 0 10px 0;
 }
