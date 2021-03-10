@@ -1,8 +1,10 @@
 import {useState} from 'react'
+import GroupFixture from './GroupFixture'
 
 const Group = ({kind, setKind}) => {
   const [start, setStart] = useState(false)
   const [pooling, setPooling] = useState(true)
+  const [rand, setRand] = useState(false)
   return (
     <main className="main">
     <h3 className="title">Create your fixtures</h3>
@@ -61,10 +63,59 @@ const Group = ({kind, setKind}) => {
         </div>
 
         <div className="button-group">
-        <button className="button-accept">RAND</button>
+        <button className="button-accept" onClick={() => {setRand(true); setStart(false)}}>START</button>
       </div>
       </section>
       
+    )}
+
+    {rand && (
+      <>
+      <section className="tables">
+      <table className="table">
+      <tr className="table-title">GROUP A</tr>
+      <tr className="table-input">
+        Unia
+      </tr>
+      <tr className="table-input">
+        Unia
+      </tr>
+      <tr className="table-input">
+        Unia
+      </tr>
+      <tr className="table-input last">
+        Unia
+      </tr>
+      
+      
+      </table>
+
+      <table className="table">
+      <tr className="table-title">GROUP B</tr>
+      <tr className="table-input light">
+        Unia
+      </tr>
+      <tr className="table-input light">
+        Unia
+      </tr>
+      <tr className="table-input light">
+        Unia
+      </tr>
+      <tr className="table-input light last">
+        Unia
+      </tr>
+      
+      
+      </table>
+
+      <div className="button-group">
+      <button className="button-accept">COPY</button>
+      <button className="button-accept cancel">RESET</button>
+    </div>
+    </section>
+
+    <GroupFixture />
+    </>
     )}
    
   </main>

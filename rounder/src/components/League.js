@@ -73,12 +73,12 @@ const League = ({kind, setKind}) => {
           <td className="table-guest">Lech</td>
         </tr>
         <tr className="table-vs">
-        <td className="table-host">Unia</td>
-          <td className="table-guest">Kosmiczni </td>
+        <td className="table-host">Leszczynskanialna Liga Piłki Siatkowej</td>
+          <td className="table-guest">Leszczynskanialna Liga Piłki Siatkowej </td>
         </tr>
         <tr className="table-vs">
         <td className="table-host last">Unia</td>
-          <td className="table-guest last">Lech </td>
+          <td className="table-guest last">Leszczynska liga Pilki sia </td>
         </tr>
         
         </table>

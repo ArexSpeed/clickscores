@@ -172,18 +172,16 @@ border-radius: 10px;
 
 /* Schedule */
 .table-vs{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
+
+  max-width: 100%;
   font-size: 24px;
   margin-bottom: 1px;
+  overflow-x: scroll;
   
 }
 
 .table-host{
-  flex: 1;
+  width:150px;
   background: var(--bg-primary);
 }
 
@@ -191,7 +189,7 @@ border-radius: 10px;
   border-radius: 0 0 0 10px;
 }
 .table-guest{
-  flex: 1;
+  width: 150px;
   background: var(--bg-secondary);
 }
 .table-guest div{
