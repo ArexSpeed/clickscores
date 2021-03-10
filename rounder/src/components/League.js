@@ -2,7 +2,20 @@ import {useState} from 'react'
 import '../styles/Main.css'
 
 const League = ({kind, setKind}) => {
-  const [start, setStart] = useState(false)
+  const [start, setStart] = useState(false);
+  const [teamsValue, setTeamsValue] = useState('')
+  let teamsQty = [4,6,8,10,12,14,16,18,20]
+
+  const showTeamQty = teamsQty.map((number,i) => (
+    <button key={i} className={`${teamsValue === number ? "button active" : "button"}`} onClick={() => setTeamsValue(number)} >{number}</button>
+  ))
+  let teamsInputs = []
+  const showTeamsInput = () => {
+   for(let i = 1; i<=teamsValue; i++){
+      teamsInputs.push(<input type="text" className="input" placeholder={`Team ${i}`}/>)
+   }
+   return teamsInputs
+  }
   return (
     <main className="main">
       <h3 className="title">Create your fixtures</h3>
@@ -14,29 +27,24 @@ const League = ({kind, setKind}) => {
       </div>
       <h3 className="title">Teams quantity</h3>
       <div className="button-group">
-      <button className="button">1</button>
-      <button className="button">2</button>
-      <button className="button">3</button>
-      <button className="button">4</button>
-      <button className="button">5</button>
+      {showTeamQty}
 
       </div>
-      <h3 className="title">Your teams</h3>
-      <div className="input-group">
-        <input type="text" className="input" placeholder="Team 1"/>
-        <input type="text" className="input" placeholder="Team 2"/>
-        <input type="text" className="input" placeholder="Team 3"/>
-        <input type="text" className="input" placeholder="Team 4"/>
-        <input type="text" className="input" placeholder="Team 1"/>
-        <input type="text" className="input" placeholder="Team 2"/>
-        <input type="text" className="input" placeholder="Team 3"/>
-        <input type="text" className="input" placeholder="Team 4"/>
-      </div>
+      {teamsValue && 
+      (
+        <>
+        <h3 className="title">Your teams</h3>
+        <div className="input-group">
+          {showTeamsInput()}
+        </div>
 
-      <div className="button-group">
-        <button className="button-accept" onClick={() => setStart(true)}>START</button>
-        <button className="button-accept cancel">RESET</button>
-      </div>
+        <div className="button-group">
+          <button className="button-accept" onClick={() => setStart(true)}>START</button>
+          <button className="button-accept cancel">RESET</button>
+        </div>
+        </>
+      )}
+      
 
       {start && 
       (

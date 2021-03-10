@@ -5,6 +5,32 @@ const Group = ({kind, setKind}) => {
   const [start, setStart] = useState(false)
   const [pooling, setPooling] = useState(true)
   const [rand, setRand] = useState(false)
+  const [teamsValue, setTeamsValue] = useState('')
+  const [groupsValue, setGroupsValue] = useState('')
+  let teamsQty = [12,16,24,32]
+  let groupsQty12 = [2,3,4]
+  let groupsQty16 = [2,4]
+  let groupsQty24 = [3,4,6]
+  let groupsQty32 = [4,8]
+
+  const showTeamQty = teamsQty.map((number,i) => (
+    <button key={i} className={`${teamsValue === number ? "button active" : "button"}`} onClick={() => {setTeamsValue(number); setGroupsValue('')}} >{number}</button>
+  ))
+
+  const showGroupQty = teamsValue === 12 ? 
+  (
+    groupsQty12.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
+  ) : teamsValue === 16 ?
+  (
+    groupsQty16.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
+  ) : teamsValue === 24 ?
+  (
+    groupsQty24.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
+  ) : teamsValue === 32 ?
+  (
+    groupsQty32.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
+  ) : ''
+
   return (
     <main className="main">
     <h3 className="title">Create your fixtures</h3>
@@ -16,22 +42,12 @@ const Group = ({kind, setKind}) => {
     </div>
     <h3 className="title">Teams quantity</h3>
     <div className="button-group">
-    <button className="button">1</button>
-    <button className="button">2</button>
-    <button className="button">3</button>
-    <button className="button">4</button>
-    <button className="button">5</button>
-    <button className="button">5</button>
+    {showTeamQty}
     </div>
 
     <h3 className="title">Groups quantity</h3>
     <div className="button-group">
-    <button className="button-gr">1</button>
-    <button className="button-gr">2</button>
-    <button className="button-gr">3</button>
-    <button className="button-gr">4</button>
-    <button className="button-gr">5</button>
-    <button className="button-gr">5</button>
+    {showGroupQty}
     </div>
 
     <h3 className="title">With pooling?</h3>
