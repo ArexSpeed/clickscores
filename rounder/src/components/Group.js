@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import GroupFixture from './GroupFixture'
+import GroupPool from './GroupPool'
 
 const Group = ({kind, setKind}) => {
   const [start, setStart] = useState(false)
@@ -60,29 +61,8 @@ const Group = ({kind, setKind}) => {
       <button className="button-accept" onClick={() => setStart(true)}>START</button>
     </div>
 
-    {start && (
-      <section className="tables">
-        <div className="table">
-        <div className="table-title">POOL 1</div>
-        <input type="text" className="table-input" placeholder="Team 1"/>
-        <input type="text" className="table-input" placeholder="Team 2"/>
-        <input type="text" className="table-input" placeholder="Team 3"/>
-        <input type="text" className="table-input last" placeholder="Team 4"/>
-        </div>
-
-        <div className="table">
-        <div className="table-title">POOL 1</div>
-        <input type="text" className="table-input light" placeholder="Team 1"/>
-        <input type="text" className="table-input light" placeholder="Team 2"/>
-        <input type="text" className="table-input light" placeholder="Team 3"/>
-        <input type="text" className="table-input light last" placeholder="Team 4"/>
-        </div>
-
-        <div className="button-group">
-        <button className="button-accept" onClick={() => {setRand(true); setStart(false)}}>START</button>
-      </div>
-      </section>
-      
+    {(start && pooling) && (
+      <GroupPool teamsValue={teamsValue} groupsValue={groupsValue} />
     )}
 
     {rand && (
