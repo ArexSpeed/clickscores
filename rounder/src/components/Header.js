@@ -1,4 +1,3 @@
-import '../styles/Main.css'
 
 const Header = () => {
   return (

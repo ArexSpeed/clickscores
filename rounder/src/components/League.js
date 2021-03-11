@@ -1,5 +1,4 @@
 import {useState, useEffect, useRef} from 'react'
-import '../styles/Main.css'
 import {getFixtures} from './FixturesFunc'
 
 const League = ({kind, setKind}) => {
@@ -97,59 +96,14 @@ const League = ({kind, setKind}) => {
         </>
       )}
       
-      {start && <section ref={tablesRef} className="tables">{getFixtures(inputValues.length, inputValues)}</section>}
+      {/* start fixtures */}
+      {start && 
+      (<>
+      <section ref={tablesRef} className="tables">{getFixtures(inputValues.length, inputValues)}</section>
       <button className="button-accept" onClick={copy}>COPY</button>
-      {/* {start && 
-      (
-        <section className="tables">
-        <table className="table">
-        <tr className="table-title">ROUND 1</tr>
-        <tr className="table-vs">
-          <td className="table-host">Unia</td>
-          <td className="table-guest">Lech</td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host">Unia</td>
-          <td className="table-guest">Lech</td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host">Unia Leszno</td>
-          <td className="table-guest">Kosmiczni</td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host last">Unia</td>
-          <td className="table-guest last">Lech </td>
-        </tr>
-        
-        </table>
-
-        <table className="table">
-        <tr className="table-title">ROUND 2</tr>
-        <tr className="table-vs">
-          <td className="table-host">Unia</td>
-          <td className="table-guest">Lech</td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host">Unia</td>
-          <td className="table-guest">Lech</td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host">Leszczynskanialna Liga Piłki Siatkowej</td>
-          <td className="table-guest">Leszczynskanialna Liga Piłki Siatkowej </td>
-        </tr>
-        <tr className="table-vs">
-        <td className="table-host last">Unia</td>
-          <td className="table-guest last">Leszczynska liga Pilki sia </td>
-        </tr>
-        
-        </table>
-
-        <div className="button-group">
-        <button className="button-accept">COPY</button>
-        <button className="button-accept cancel">RESET</button>
-      </div>
-      </section>
-      )} */}
+      </>
+      )}
+      
     </main>
   )
 }
