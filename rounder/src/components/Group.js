@@ -6,8 +6,8 @@ const Group = ({kind, setKind}) => {
   const [start, setStart] = useState(false)
   const [pooling, setPooling] = useState(true)
   const [rand, setRand] = useState(false)
-  const [teamsValue, setTeamsValue] = useState('')
-  const [groupsValue, setGroupsValue] = useState('')
+  const [numberOfTeams, setNumberOfTeams] = useState('')
+  const [numberOfGroups, setNumberOfGroups] = useState('')
   let teamsQty = [12,16,24,32]
   let groupsQty12 = [2,3,4]
   let groupsQty16 = [2,4]
@@ -15,21 +15,21 @@ const Group = ({kind, setKind}) => {
   let groupsQty32 = [4,8]
 
   const showTeamQty = teamsQty.map((number,i) => (
-    <button key={i} className={`${teamsValue === number ? "button active" : "button"}`} onClick={() => {setTeamsValue(number); setGroupsValue('')}} >{number}</button>
+    <button key={i} className={`${numberOfTeams === number ? "button active" : "button"}`} onClick={() => {setNumberOfTeams(number); setNumberOfGroups('')}} >{number}</button>
   ))
 
-  const showGroupQty = teamsValue === 12 ? 
+  const showGroupQty = numberOfTeams === 12 ? 
   (
-    groupsQty12.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
-  ) : teamsValue === 16 ?
+    groupsQty12.map((number,i) => <button className={`${numberOfGroups === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setNumberOfGroups(number)}>{number}</button>)
+  ) : numberOfTeams === 16 ?
   (
-    groupsQty16.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
-  ) : teamsValue === 24 ?
+    groupsQty16.map((number,i) => <button className={`${numberOfGroups === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setNumberOfGroups(number)}>{number}</button>)
+  ) : numberOfTeams === 24 ?
   (
-    groupsQty24.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
-  ) : teamsValue === 32 ?
+    groupsQty24.map((number,i) => <button className={`${numberOfGroups === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setNumberOfGroups(number)}>{number}</button>)
+  ) : numberOfTeams === 32 ?
   (
-    groupsQty32.map((number,i) => <button className={`${groupsValue === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setGroupsValue(number)}>{number}</button>)
+    groupsQty32.map((number,i) => <button className={`${numberOfGroups === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setNumberOfGroups(number)}>{number}</button>)
   ) : ''
 
   return (
@@ -62,7 +62,17 @@ const Group = ({kind, setKind}) => {
     </div>
 
     {(start && pooling) && (
-      <GroupPool teamsValue={teamsValue} groupsValue={groupsValue} />
+      <>
+      <GroupPool numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
+      <div className="button-group">
+      <button className="button-accept cancel" 
+        onClick={() => {
+          setNumberOfGroups('')
+          setNumberOfTeams('')
+          setStart(false)
+        }}>RESET</button>
+    </div>
+      </>
     )}
 
     {rand && (
@@ -106,7 +116,12 @@ const Group = ({kind, setKind}) => {
 
       <div className="button-group">
       <button className="button-accept">COPY</button>
-      <button className="button-accept cancel">RESET</button>
+      <button className="button-accept cancel" 
+        onClick={() => {
+          setNumberOfGroups('')
+          setNumberOfTeams('')
+          setStart(false)
+        }}>RESET</button>
     </div>
     </section>
 
