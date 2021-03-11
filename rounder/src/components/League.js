@@ -1,21 +1,49 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import '../styles/Main.css'
+import LeagueFixtures from './LeagueFixtures';
 
 const League = ({kind, setKind}) => {
   const [start, setStart] = useState(false);
-  const [teamsValue, setTeamsValue] = useState('')
+  const [numberOfTeams, setNumberOfTeams] = useState('')
+  const [inputValues, setInputValues] = useState([])
+  const [teamsName, setTeamsName] = useState([])
   let teamsQty = [4,6,8,10,12,14,16,18,20]
 
-  const showTeamQty = teamsQty.map((number,i) => (
-    <button key={i} className={`${teamsValue === number ? "button active" : "button"}`} onClick={() => setTeamsValue(number)} >{number}</button>
-  ))
-  let teamsInputs = []
-  const showTeamsInput = () => {
-   for(let i = 1; i<=teamsValue; i++){
-      teamsInputs.push(<input type="text" className="input" placeholder={`Team ${i}`}/>)
+  //reset teamsName on change teamsValue
+  useEffect(() => {
+    setInputValues([])
+    for(let i = 1; i<=numberOfTeams; i++){
+      setInputValues(prev => [...prev,
+        {
+        teamId: i,
+        name: ''
+      }]
+        
+      )  
    }
-   return teamsInputs
-  }
+  }, [numberOfTeams])
+
+  const showTeamQty = teamsQty.map((number,i) => (
+    <button key={i} className={`${numberOfTeams === number ? "button active" : "button"}`} onClick={() => setNumberOfTeams(number)} >{number}</button>
+  ))
+  
+  const showInputToFill = inputValues.map((input,i) => (
+    <input
+      key={i}
+      type="text"
+      className="input"
+      placeholder={`Team ${input.teamId}`}
+      name="value"
+      onChange={e => handleChangeInput(i, e)}
+    />
+  ))
+  
+  const handleChangeInput = (i, e) => {
+    const values = [...inputValues];
+    values[i][e.target.name] = e.target.value;
+    setInputValues(values);
+  };
+
   return (
     <main className="main">
       <h3 className="title">Create your fixtures</h3>
@@ -30,12 +58,12 @@ const League = ({kind, setKind}) => {
       {showTeamQty}
 
       </div>
-      {teamsValue && 
+      {numberOfTeams && 
       (
         <>
         <h3 className="title">Your teams</h3>
         <div className="input-group">
-          {showTeamsInput()}
+          {showInputToFill}
         </div>
 
         <div className="button-group">
@@ -45,7 +73,7 @@ const League = ({kind, setKind}) => {
         </>
       )}
       
-
+      {start && <LeagueFixtures inputValues={inputValues} />}
       {start && 
       (
         <section className="tables">
