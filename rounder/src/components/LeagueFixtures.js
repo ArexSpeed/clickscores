@@ -1,12 +1,9 @@
 import React from 'react'
+import {getFixtures} from './FixturesFunc'
 
 const LeagueFixtures = ({inputValues}) => {
-  const showValues = inputValues.map(input => (
-    <div>
-      {input.teamId} : {input.value}
-    </div>
-  ));
-  return <div>{showValues}</div>;
+  
+  return <section className="tables">{getFixtures(inputValues.length, inputValues)}</section>;
 }
 
 export default LeagueFixtures

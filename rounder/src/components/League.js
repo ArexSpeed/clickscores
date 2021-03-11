@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react'
 import '../styles/Main.css'
 import LeagueFixtures from './LeagueFixtures';
+import {getFixtures} from './FixturesFunc'
 
 const League = ({kind, setKind}) => {
   const [start, setStart] = useState(false);
   const [numberOfTeams, setNumberOfTeams] = useState('')
   const [inputValues, setInputValues] = useState([])
-  const [teamsName, setTeamsName] = useState([])
   let teamsQty = [4,6,8,10,12,14,16,18,20]
 
   //reset teamsName on change teamsValue
@@ -17,8 +17,7 @@ const League = ({kind, setKind}) => {
         {
         teamId: i,
         name: ''
-      }]
-        
+      }] 
       )  
    }
   }, [numberOfTeams])
@@ -33,7 +32,8 @@ const League = ({kind, setKind}) => {
       type="text"
       className="input"
       placeholder={`Team ${input.teamId}`}
-      name="value"
+      name="name"
+      value={input.name}
       onChange={e => handleChangeInput(i, e)}
     />
   ))
@@ -73,7 +73,7 @@ const League = ({kind, setKind}) => {
         </>
       )}
       
-      {start && <LeagueFixtures inputValues={inputValues} />}
+      {start && <section className="tables">{getFixtures(inputValues.length, inputValues)}</section>}
       {start && 
       (
         <section className="tables">
