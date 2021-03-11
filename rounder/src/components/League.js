@@ -1,6 +1,5 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import '../styles/Main.css'
-import LeagueFixtures from './LeagueFixtures';
 import {getFixtures} from './FixturesFunc'
 
 const League = ({kind, setKind}) => {
@@ -8,6 +7,7 @@ const League = ({kind, setKind}) => {
   const [numberOfTeams, setNumberOfTeams] = useState('')
   const [inputValues, setInputValues] = useState([])
   let teamsQty = [4,6,8,10,12,14,16,18,20]
+  const tablesRef = useRef('')
 
   //reset teamsName on change teamsValue
   useEffect(() => {
@@ -44,6 +44,30 @@ const League = ({kind, setKind}) => {
     setInputValues(values);
   };
 
+  function copy() {
+    var elm = tablesRef.current;
+    // for Internet Explorer
+  
+    if(document.body.createTextRange) {
+     let range = document.body.createTextRange();
+      range.moveToElementText(elm);
+      range.select();
+      document.execCommand("Copy");
+      alert("Skopiowałeś terminiarz");
+    }
+    else if(window.getSelection) {
+      // other browsers
+  
+      let selection = window.getSelection();
+      let range = document.createRange();
+      range.selectNodeContents(elm);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+      alert("Skopiowałeś terminiarz");
+    }
+  }
+
   return (
     <main className="main">
       <h3 className="title">Create your fixtures</h3>
@@ -73,8 +97,9 @@ const League = ({kind, setKind}) => {
         </>
       )}
       
-      {start && <section className="tables">{getFixtures(inputValues.length, inputValues)}</section>}
-      {start && 
+      {start && <section ref={tablesRef} className="tables">{getFixtures(inputValues.length, inputValues)}</section>}
+      <button className="button-accept" onClick={copy}>COPY</button>
+      {/* {start && 
       (
         <section className="tables">
         <table className="table">
@@ -124,7 +149,7 @@ const League = ({kind, setKind}) => {
         <button className="button-accept cancel">RESET</button>
       </div>
       </section>
-      )}
+      )} */}
     </main>
   )
 }
