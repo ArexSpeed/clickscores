@@ -56,7 +56,7 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
       <button className="button-accept" onClick={() => setStart(true)}>START</button>
       </div>
       </section>
-      {start && <GroupFillDraw teamsInGroup={teamsInGroup} />}
+      {start && <GroupFillDraw teamsInGroup={teamsInGroup} numberOfGroups={numberOfGroups} numberOfTeams={numberOfTeams} />}
     </>
   )
 }

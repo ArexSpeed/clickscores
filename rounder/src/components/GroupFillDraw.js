@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+import { getGroupFixtures } from './fixtures/getGroupFixtures'
 
-const GroupFillDraw = ({teamsInGroup}) => {
+const GroupFillDraw = ({teamsInGroup, numberOfGroups, numberOfTeams}) => {
+  const tablesRef = useRef('')
   const [teamsInGroupA, setTeamsInGroupA] = useState([])
   const [teamsInGroupB, setTeamsInGroupB] = useState([])
   const [teamsInGroupC, setTeamsInGroupC] = useState([])
@@ -61,17 +63,42 @@ const GroupFillDraw = ({teamsInGroup}) => {
     ]))
   }, [teamsInGroup])
   
-
+  const teams = numberOfTeams/numberOfGroups
+  function copy() {
+    var elm = tablesRef.current;
+    // for Internet Explorer
+  
+    if(document.body.createTextRange) {
+     let range = document.body.createTextRange();
+      range.moveToElementText(elm);
+      range.select();
+      document.execCommand("Copy");
+      alert("Skopiowałeś terminiarz");
+    }
+    else if(window.getSelection) {
+      // other browsers
+  
+      let selection = window.getSelection();
+      let range = document.createRange();
+      range.selectNodeContents(elm);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+      alert("Skopiowałeś terminiarz");
+    }
+  }
+//console.log(teamsInGroupA[1].name, 'in Ga')
   return (
-    <div>
-      {teamsInGroupA.map(team => <p>{team.name}</p>)}
-      {teamsInGroupB.map(team => <p>{team.name}</p>)}
-      {teamsInGroupC.map(team => <p>{team.name}</p>)}
-      {teamsInGroupD.map(team => <p>{team.name}</p>)}
-      {/* {teamsInGroupE.map(team => <p>{team.name}</p>)}
-      {teamsInGroupF.map(team => <p>{team.name}</p>)}
-      {teamsInGroupG.map(team => <p>{team.name}</p>)} */}
-    </div>
+    <>
+    {teamsInGroupA.length>1 && 
+    <section ref={tablesRef} className="tables">{
+       //teamsInGroupA[1].name
+    getGroupFixtures(teams, numberOfGroups, teamsInGroupA, teamsInGroupB, teamsInGroupC, teamsInGroupD, teamsInGroupE, teamsInGroupF, teamsInGroupG, teamsInGroupH)
+    }
+    </section>
+    }
+    <button className="button-accept" onClick={copy}>COPY</button>
+    </>
   )
 }
 

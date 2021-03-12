@@ -139,6 +139,11 @@ border-radius: 10px;
   color: #aaaaaa;
   font-size: 20px;
 }
+.input.groupName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Buttons accept */
 .button-accept{
   width: 100px;
