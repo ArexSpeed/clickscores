@@ -10,7 +10,7 @@ const Group = ({kind, setKind}) => {
   const [numberOfTeams, setNumberOfTeams] = useState('')
   const [numberOfGroups, setNumberOfGroups] = useState('')
   let teamsQty = [12,16,24,32]
-  let groupsQty12 = [2,3,4]
+  let groupsQty12 = [2,3]
   let groupsQty16 = [2,4]
   let groupsQty24 = [4,6]
   let groupsQty32 = [4,8]

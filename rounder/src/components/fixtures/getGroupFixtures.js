@@ -272,8 +272,673 @@ export const getGroupFixtures = (teams,groups, teams_grA,teams_grB,teams_grC,tea
 
     </>
   )
-  :
+  : (teams === 6) ?
   (
-    <div>Noy</div>
+    <>
+        <div className="input groupName">Group A</div>
+        <table className="table"> 
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[3].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+        </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[1].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[5].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[2].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[1].name} </td><td className="table-guest last"> {teams_grA[4].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[3].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[1].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[5].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[2].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[4].name} </td><td className="table-guest last"> {teams_grA[1].name} </td></tr>
+        </table>
+
+        <div className="input groupName">Group B</div>
+        <table className="table"> 
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[3].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+        </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[1].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[5].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[2].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[1].name} </td><td className="table-guest last"> {teams_grB[4].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[3].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[1].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[5].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[2].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[4].name} </td><td className="table-guest last"> {teams_grB[1].name} </td></tr>
+        </table>
+
+        {groups >= 3 && 
+        (
+          <>
+          <div className="input groupName">Group C</div>
+        <table className="table"> 
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[3].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+        </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[1].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[5].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[2].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[1].name} </td><td className="table-guest last"> {teams_grC[4].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[3].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[1].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[5].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[2].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grC[4].name} </td><td className="table-guest last"> {teams_grC[1].name} </td></tr>
+        </table>
+
+        <div className="input groupName">Group D</div>
+        <table className="table"> 
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[3].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+        </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[1].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[5].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[2].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[1].name} </td><td className="table-guest last"> {teams_grD[4].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[3].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[1].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[5].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[2].name} </td></tr>
+          </table>
+        <table className="table"> 
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grD[4].name} </td><td className="table-guest last"> {teams_grD[1].name} </td></tr>
+        </table>
+          </>
+        )}
+    </>
   )
+  : (teams === 8) ?
+  (
+    <>
+        <div className="input groupName">Group A</div>
+        <table className="table">
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[4].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[6].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[7].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[0].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[5].name} </td><td className="table-guest last"> {teams_grA[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[4].name} </td><td className="table-guest last"> {teams_grA[6].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[0].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[6].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[7].name} </td><td className="table-guest last"> {teams_grA[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[7].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[0].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[6].name} </td><td className="table-guest last"> {teams_grA[7].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[6].name} </td><td className="table-guest last"> {teams_grA[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[6].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[7].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[4].name} </td><td className="table-guest last"> {teams_grA[5].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[7].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[0].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[6].name} </td><td className="table-guest last"> {teams_grA[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 11: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[4].name} </td><td className="table-guest last"> {teams_grA[7].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 12: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[2].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[6].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[7].name} </td></tr>
+          </table>
+        <table className="table">
+          <tr className="table-title">ROUND 13: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[1].name} </td><td className="table-guest"> {teams_grA[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[5].name} </td><td className="table-guest"> {teams_grA[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[7].name} </td><td className="table-guest last"> {teams_grA[6].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 14: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[3].name} </td><td className="table-guest"> {teams_grA[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[4].name} </td><td className="table-guest"> {teams_grA[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grA[7].name} </td><td className="table-guest"> {teams_grA[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grA[0].name} </td><td className="table-guest last"> {teams_grA[6].name} </td></tr>
+        </table>
+
+        <div className="input groupName">Group B</div>
+        <table className="table">
+          <tr className="table-title">ROUND 1: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[4].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 2: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[6].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[7].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[0].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[5].name} </td><td className="table-guest last"> {teams_grB[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 3: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[4].name} </td><td className="table-guest last"> {teams_grB[6].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 4: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[0].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[6].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[7].name} </td><td className="table-guest last"> {teams_grB[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 5: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[7].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 6: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[0].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[6].name} </td><td className="table-guest last"> {teams_grB[7].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 7: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[6].name} </td><td className="table-guest last"> {teams_grB[0].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 8: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[6].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[7].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 9: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[7].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[4].name} </td><td className="table-guest last"> {teams_grB[5].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 10: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[7].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[0].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[6].name} </td><td className="table-guest last"> {teams_grB[4].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 11: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[6].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[4].name} </td><td className="table-guest last"> {teams_grB[7].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 12: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[2].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[3].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[6].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[7].name} </td></tr>
+          </table>
+        <table className="table">
+          <tr className="table-title">ROUND 13: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[1].name} </td><td className="table-guest"> {teams_grB[4].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[5].name} </td><td className="table-guest"> {teams_grB[0].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[7].name} </td><td className="table-guest last"> {teams_grB[6].name} </td></tr>
+           </table>
+        <table className="table">
+          <tr className="table-title">ROUND 14: </tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[3].name} </td><td className="table-guest"> {teams_grB[1].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[4].name} </td><td className="table-guest"> {teams_grB[2].name} </td></tr>
+          <tr className="table-row"><td className="table-host">{teams_grB[7].name} </td><td className="table-guest"> {teams_grB[5].name} </td></tr>
+          <tr className="table-row"><td className="table-host last">{teams_grB[0].name} </td><td className="table-guest last"> {teams_grB[6].name} </td></tr>
+        </table>
+
+        {groups >= 3 && 
+        (
+          <>
+          <div className="input groupName">Group C</div>
+<table className="table">
+  <tr className="table-title">ROUND 1: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[4].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 2: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[6].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[7].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[0].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[5].name} </td><td className="table-guest last"> {teams_grC[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 3: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[4].name} </td><td className="table-guest last"> {teams_grC[6].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 4: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[0].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[6].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[7].name} </td><td className="table-guest last"> {teams_grC[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 5: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[7].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 6: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[0].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[6].name} </td><td className="table-guest last"> {teams_grC[7].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 7: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[6].name} </td><td className="table-guest last"> {teams_grC[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 8: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[6].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[7].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 9: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[4].name} </td><td className="table-guest last"> {teams_grC[5].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 10: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[7].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[0].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[6].name} </td><td className="table-guest last"> {teams_grC[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 11: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[4].name} </td><td className="table-guest last"> {teams_grC[7].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 12: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[2].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[6].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[7].name} </td></tr>
+  </table>
+<table className="table">
+  <tr className="table-title">ROUND 13: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[1].name} </td><td className="table-guest"> {teams_grC[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[5].name} </td><td className="table-guest"> {teams_grC[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[7].name} </td><td className="table-guest last"> {teams_grC[6].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 14: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[3].name} </td><td className="table-guest"> {teams_grC[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[4].name} </td><td className="table-guest"> {teams_grC[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grC[7].name} </td><td className="table-guest"> {teams_grC[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grC[0].name} </td><td className="table-guest last"> {teams_grC[6].name} </td></tr>
+</table>
+
+<div className="input groupName">Group D</div>
+<table className="table">
+  <tr className="table-title">ROUND 1: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[4].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 2: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[6].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[7].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[0].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[5].name} </td><td className="table-guest last"> {teams_grD[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 3: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[4].name} </td><td className="table-guest last"> {teams_grD[6].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 4: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[0].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[6].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[7].name} </td><td className="table-guest last"> {teams_grD[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 5: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[7].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 6: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[0].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[6].name} </td><td className="table-guest last"> {teams_grD[7].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 7: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[6].name} </td><td className="table-guest last"> {teams_grD[0].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 8: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[6].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[7].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 9: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[7].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[4].name} </td><td className="table-guest last"> {teams_grD[5].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 10: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[7].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[0].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[6].name} </td><td className="table-guest last"> {teams_grD[4].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 11: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[6].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[4].name} </td><td className="table-guest last"> {teams_grD[7].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 12: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[2].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[3].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[6].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[7].name} </td></tr>
+  </table>
+<table className="table">
+  <tr className="table-title">ROUND 13: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[1].name} </td><td className="table-guest"> {teams_grD[4].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[5].name} </td><td className="table-guest"> {teams_grD[0].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[7].name} </td><td className="table-guest last"> {teams_grD[6].name} </td></tr>
+   </table>
+<table className="table">
+  <tr className="table-title">ROUND 14: </tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[3].name} </td><td className="table-guest"> {teams_grD[1].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[4].name} </td><td className="table-guest"> {teams_grD[2].name} </td></tr>
+  <tr className="table-row"><td className="table-host">{teams_grD[7].name} </td><td className="table-guest"> {teams_grD[5].name} </td></tr>
+  <tr className="table-row"><td className="table-host last">{teams_grD[0].name} </td><td className="table-guest last"> {teams_grD[6].name} </td></tr>
+</table>
+          </>
+        )}
+    </>
+  )
+  : ""
+
+  
 )
