@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import GroupFillDraw from './GroupFillDraw'
 import GroupFixture from './GroupFixture'
 
 const GroupFill = ({numberOfTeams, numberOfGroups}) => {
@@ -20,7 +21,9 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
 
 
   let groups = []
+  let groupsName = ['A','B','C', 'D', 'E', 'F', 'G', 'H']
   for (let i = 1; i<= numberOfGroups; i++) groups.push(i)
+
   const handleChangeInput = (i, e) => {
     const values = [...teamsInGroup];
     values[i][e.target.name] = e.target.value;
@@ -33,7 +36,7 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
       {
         groups.map((group,i) => (
           <div className="table" key={i}>
-              <div className="table-title">GROUP {group}</div>
+              <div className="table-title">GROUP {groupsName[i]}</div>
               {teamsInGroup.map((team, j) => (
                  team.group === group &&
                  <input 
@@ -53,7 +56,7 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
       <button className="button-accept" onClick={() => setStart(true)}>START</button>
       </div>
       </section>
-      {/* {start && <GroupFixture teamsInPot={teamsIn} groups={groups} pots={pots}/>} */}
+      {start && <GroupFillDraw teamsInGroup={teamsInGroup} />}
     </>
   )
 }

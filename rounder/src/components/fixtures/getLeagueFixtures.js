@@ -1,4 +1,4 @@
-export const getFixtures = (n, teams) => (
+export const getLeagueFixtures = (n, teams) => (
   n === 4 ? 
   (
     <>

@@ -1,5 +1,5 @@
 import {useState, useEffect, useRef} from 'react'
-import {getFixtures} from './FixturesFunc'
+import {getLeagueFixtures} from './fixtures/getLeagueFixtures'
 
 const League = ({kind, setKind}) => {
   const [start, setStart] = useState(false);
@@ -99,7 +99,7 @@ const League = ({kind, setKind}) => {
       {/* start fixtures */}
       {start && 
       (<>
-      <section ref={tablesRef} className="tables">{getFixtures(inputValues.length, inputValues)}</section>
+      <section ref={tablesRef} className="tables">{getLeagueFixtures(inputValues.length, inputValues)}</section>
       <button className="button-accept" onClick={copy}>COPY</button>
       </>
       )}
