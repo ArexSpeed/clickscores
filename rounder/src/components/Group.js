@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import GroupDraw from './GroupDraw'
+import GroupFill from './GroupFill'
 import GroupFixture from './GroupFixture'
 import GroupPool from './GroupPool'
 
@@ -76,9 +76,9 @@ const Group = ({kind, setKind}) => {
       </>
     )}
 
-    {/* {(start && !pooling) && (
+    {(start && !pooling) && (
       <>
-      <GroupDraw numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
+      <GroupFill numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
       <div className="button-group">
       <button className="button-accept cancel" 
         onClick={() => {
@@ -88,7 +88,7 @@ const Group = ({kind, setKind}) => {
         }}>RESET</button>
     </div>
       </>
-    )} */}
+    )}
 
 
 
