@@ -161,6 +161,12 @@ border-radius: 10px;
 .button-accept.cancel{
   background: var(--bg-red);
 }
+.button-accept.fixtures{
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Groups qty buttons */
 .button-gr{

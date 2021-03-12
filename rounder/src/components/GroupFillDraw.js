@@ -73,7 +73,7 @@ const GroupFillDraw = ({teamsInGroup, numberOfGroups, numberOfTeams}) => {
       range.moveToElementText(elm);
       range.select();
       document.execCommand("Copy");
-      alert("Skopiowałeś terminiarz");
+      alert("Fixtures copied!");
     }
     else if(window.getSelection) {
       // other browsers
@@ -84,7 +84,7 @@ const GroupFillDraw = ({teamsInGroup, numberOfGroups, numberOfTeams}) => {
       selection.removeAllRanges();
       selection.addRange(range);
       document.execCommand("Copy");
-      alert("Skopiowałeś terminiarz");
+      alert("Fixtures copied!");
     }
   }
 //console.log(teamsInGroupA[1].name, 'in Ga')

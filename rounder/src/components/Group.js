@@ -1,6 +1,5 @@
 import {useState} from 'react'
 import GroupFill from './GroupFill'
-import GroupFixture from './GroupFixture'
 import GroupPool from './GroupPool'
 
 const Group = ({kind, setKind}) => {

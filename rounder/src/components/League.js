@@ -52,7 +52,7 @@ const League = ({kind, setKind}) => {
       range.moveToElementText(elm);
       range.select();
       document.execCommand("Copy");
-      alert("Skopiowałeś terminiarz");
+      alert("Fixtures copied!");
     }
     else if(window.getSelection) {
       // other browsers
@@ -63,7 +63,7 @@ const League = ({kind, setKind}) => {
       selection.removeAllRanges();
       selection.addRange(range);
       document.execCommand("Copy");
-      alert("Skopiowałeś terminiarz");
+      alert("Fixtures copied!");
     }
   }
 

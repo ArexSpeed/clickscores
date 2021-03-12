@@ -1,6 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+import { getGroupFixtures } from './fixtures/getGroupFixtures'
 
 const GroupDraw = ({teamsInPot, groups, pots}) => {
+  const tablesRef = useRef('')
   const [teamsInGroupA, setTeamsInGroupA] = useState([])
   const [teamsInGroupB, setTeamsInGroupB] = useState([])
   const [teamsInGroupC, setTeamsInGroupC] = useState([])
@@ -414,6 +416,32 @@ useEffect(() => {
 )
 }, [pots])
 
+const teams = pots.length
+const numberOfGroups = groups.length
+  function copy() {
+    var elm = tablesRef.current;
+    // for Internet Explorer
+  
+    if(document.body.createTextRange) {
+     let range = document.body.createTextRange();
+      range.moveToElementText(elm);
+      range.select();
+      document.execCommand("Copy");
+      alert("Fixtures copied!");
+    }
+    else if(window.getSelection) {
+      // other browsers
+  
+      let selection = window.getSelection();
+      let range = document.createRange();
+      range.selectNodeContents(elm);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+      alert("Fixtures copied!");
+    }
+  }
+
 
   return (
     <div>
@@ -477,6 +505,23 @@ useEffect(() => {
         </table>
         </>
         )}
+
+    <div className="button-group">
+      <div className="button-accept fixtures">FIXTURES</div>
+    </div>
+
+    <section id="fixtures">
+    {teamsInGroupA.length>1 && 
+    <>
+    <section ref={tablesRef} className="tables">{
+       //teamsInGroupA[1].name
+    getGroupFixtures(teams, numberOfGroups, teamsInGroupA, teamsInGroupB, teamsInGroupC, teamsInGroupD, teamsInGroupE, teamsInGroupF, teamsInGroupG, teamsInGroupH)
+    }
+    </section>
+    <button className="button-accept" onClick={copy}>COPY</button>
+    </>
+    }
+    </section>
     </div>
   )
 }
