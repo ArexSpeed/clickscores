@@ -6,7 +6,7 @@ const League = ({kind, setKind}) => {
   const [numberOfTeams, setNumberOfTeams] = useState('')
   const [inputValues, setInputValues] = useState([])
   let teamsQty = [4,6,8,10,12,14,16,18,20]
-  const tablesRef = useRef('')
+  const fixturesRef = useRef('')
 
   //reset teamsName on change teamsValue
   useEffect(() => {
@@ -43,8 +43,16 @@ const League = ({kind, setKind}) => {
     setInputValues(values);
   };
 
+  //scrolling
+  const scrollInto = () => {
+    setTimeout(() => {
+      fixturesRef.current.scrollIntoView({ behavior: 'smooth' })
+    }, 100
+    ) 
+  }
+
   function copy() {
-    var elm = tablesRef.current;
+    var elm = fixturesRef.current;
     // for Internet Explorer
   
     if(document.body.createTextRange) {
@@ -66,6 +74,7 @@ const League = ({kind, setKind}) => {
       alert("Fixtures copied!");
     }
   }
+
 
   return (
     <main className="main">
@@ -90,20 +99,32 @@ const League = ({kind, setKind}) => {
         </div>
 
         <div className="button-group">
-          <button className="button-accept" onClick={() => setStart(true)}>START</button>
-          <button className="button-accept cancel">RESET</button>
+
+          <button className="button-accept" 
+            onClick={() => {
+              setStart(true)
+              scrollInto()
+              }}>
+              START
+          </button>
         </div>
+
         </>
       )}
       
       {/* start fixtures */}
       {start && 
       (<>
-      <section ref={tablesRef} className="tables">{getLeagueFixtures(inputValues.length, inputValues)}</section>
+      <section ref={fixturesRef} className="tables">{getLeagueFixtures(inputValues.length, inputValues)}</section>
       <button className="button-accept" onClick={copy}>COPY</button>
+      <button className="button-accept cancel" 
+        onClick={() => {
+          setNumberOfTeams('')
+          setInputValues([])
+          setStart(false)
+      }}>RESET</button>
       </>
       )}
-      
     </main>
   )
 }
