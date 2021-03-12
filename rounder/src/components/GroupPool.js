@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import GroupRand from './GroupRand'
+import GroupDraw from './GroupDraw'
 
 const GroupPool = ({numberOfTeams, numberOfGroups}) => {
   const [start, setStart] = useState(false)
@@ -60,7 +60,7 @@ const GroupPool = ({numberOfTeams, numberOfGroups}) => {
       <button className="button-accept" onClick={() => setStart(true)}>START</button>
       </div>
       </section>
-      {start && <GroupRand teamsInPot={teamsInPot} groups={groups} pots={pots}/>}
+      {start && <GroupDraw teamsInPot={teamsInPot} groups={groups} pots={pots}/>}
     </>
   )
 }

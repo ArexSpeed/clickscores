@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import GroupDraw from './GroupDraw'
 import GroupFixture from './GroupFixture'
 import GroupPool from './GroupPool'
 
@@ -11,7 +12,7 @@ const Group = ({kind, setKind}) => {
   let teamsQty = [12,16,24,32]
   let groupsQty12 = [2,3,4]
   let groupsQty16 = [2,4]
-  let groupsQty24 = [3,4,6]
+  let groupsQty24 = [4,6]
   let groupsQty32 = [4,8]
 
   const showTeamQty = teamsQty.map((number,i) => (
@@ -51,7 +52,7 @@ const Group = ({kind, setKind}) => {
     {showGroupQty}
     </div>
 
-    <h3 className="title">With pooling?</h3>
+    <h3 className="title">With a draw?</h3>
     <div className="selector selector-pooling">
       <button className={`${pooling ? 'selector-button active' : 'selector-button'}`} onClick={() => setPooling(true)}>YES</button>
       <button className={`${pooling ? 'selector-button' : 'selector-button active'}`} onClick={() => setPooling(false)}>NO</button>
@@ -75,45 +76,24 @@ const Group = ({kind, setKind}) => {
       </>
     )}
 
-    {rand && (
+    {/* {(start && !pooling) && (
       <>
-      <section className="tables">
-      <table className="table">
-      <tr className="table-title">GROUP A</tr>
-      <tr className="table-input">
-        Unia
-      </tr>
-      <tr className="table-input">
-        Unia
-      </tr>
-      <tr className="table-input">
-        Unia
-      </tr>
-      <tr className="table-input last">
-        Unia
-      </tr>
-      
-      
-      </table>
+      <GroupDraw numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
+      <div className="button-group">
+      <button className="button-accept cancel" 
+        onClick={() => {
+          setNumberOfGroups('')
+          setNumberOfTeams('')
+          setStart(false)
+        }}>RESET</button>
+    </div>
+      </>
+    )} */}
 
-      <table className="table">
-      <tr className="table-title">GROUP B</tr>
-      <tr className="table-input light">
-        Unia
-      </tr>
-      <tr className="table-input light">
-        Unia
-      </tr>
-      <tr className="table-input light">
-        Unia
-      </tr>
-      <tr className="table-input light last">
-        Unia
-      </tr>
-      
-      
-      </table>
 
+
+    {/* {rand && (
+      <>
       <div className="button-group">
       <button className="button-accept">COPY</button>
       <button className="button-accept cancel" 
@@ -123,11 +103,10 @@ const Group = ({kind, setKind}) => {
           setStart(false)
         }}>RESET</button>
     </div>
-    </section>
 
     <GroupFixture />
     </>
-    )}
+    )} */}
    
   </main>
   )

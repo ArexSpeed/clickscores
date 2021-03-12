@@ -208,12 +208,15 @@ border-radius: 10px;
   border-radius: 10px 10px 0 0;
 }
 .table-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   height: 50px;
   width: 300px;
   font-size: 24px;
   font-family: var(--font-family);
   margin-bottom: 1px;
-  text-align: center;
   border:none;
   background: var(--bg-primary);
   color: #fff;
