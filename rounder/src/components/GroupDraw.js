@@ -2,7 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import { getGroupFixtures } from './fixtures/getGroupFixtures'
 
 const GroupDraw = ({teamsInPot, groups, pots}) => {
-  const tablesRef = useRef('')
+  const fixturesRef = useRef('')
   const [teamsInGroupA, setTeamsInGroupA] = useState([])
   const [teamsInGroupB, setTeamsInGroupB] = useState([])
   const [teamsInGroupC, setTeamsInGroupC] = useState([])
@@ -419,7 +419,7 @@ useEffect(() => {
 const teams = pots.length
 const numberOfGroups = groups.length
   function copy() {
-    var elm = tablesRef.current;
+    var elm = fixturesRef.current;
     // for Internet Explorer
   
     if(document.body.createTextRange) {
@@ -442,6 +442,14 @@ const numberOfGroups = groups.length
     }
   }
 
+      //scrolling
+      const scrollInto = () => {
+        setTimeout(() => {
+          fixturesRef.current.scrollIntoView({ behavior: 'smooth' })
+        }, 100
+        ) 
+      }
+  
 
   return (
     <div>
@@ -507,14 +515,14 @@ const numberOfGroups = groups.length
         )}
 
     <div className="button-group">
-      <div className="button-accept fixtures">FIXTURES</div>
+      <div className="button-accept fixtures" onClick={() => scrollInto()}>FIXTURES</div>
     </div>
+    
 
     <section id="fixtures">
     {teamsInGroupA.length>1 && 
     <>
-    <section ref={tablesRef} className="tables">{
-       //teamsInGroupA[1].name
+    <section ref={fixturesRef} className="tables">{
     getGroupFixtures(teams, numberOfGroups, teamsInGroupA, teamsInGroupB, teamsInGroupC, teamsInGroupD, teamsInGroupE, teamsInGroupF, teamsInGroupG, teamsInGroupH)
     }
     </section>

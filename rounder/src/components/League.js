@@ -99,7 +99,6 @@ const League = ({kind, setKind}) => {
         </div>
 
         <div className="button-group">
-
           <button className="button-accept" 
             onClick={() => {
               setStart(true)

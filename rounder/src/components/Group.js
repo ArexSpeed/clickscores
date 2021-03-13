@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 import GroupFill from './GroupFill'
 import GroupPool from './GroupPool'
 
@@ -8,6 +8,7 @@ const Group = ({kind, setKind}) => {
   const [rand, setRand] = useState(false)
   const [numberOfTeams, setNumberOfTeams] = useState('')
   const [numberOfGroups, setNumberOfGroups] = useState('')
+  const fillRef = useRef('')
   let teamsQty = [12,16,24,32]
   let groupsQty12 = [2,3]
   let groupsQty16 = [2,4]
@@ -31,6 +32,14 @@ const Group = ({kind, setKind}) => {
   (
     groupsQty32.map((number,i) => <button className={`${numberOfGroups === number ? "button-gr active" : "button-gr"}`} key={i} onClick={() => setNumberOfGroups(number)}>{number}</button>)
   ) : ''
+
+    //scrolling
+    const scrollInto = () => {
+      setTimeout(() => {
+        fillRef.current.scrollIntoView({ behavior: 'smooth' })
+      }, 100
+      ) 
+    }
 
   return (
     <main className="main">
@@ -58,11 +67,17 @@ const Group = ({kind, setKind}) => {
     </div>
 
     <div className="button-group">
-      <button className="button-accept" onClick={() => setStart(true)}>START</button>
-    </div>
+          <button className="button-accept" 
+            onClick={() => {
+              setStart(true)
+              scrollInto()
+              }}>
+              START
+          </button>
+        </div>
 
     {(start && pooling) && (
-      <>
+      <section ref={fillRef}>
       <GroupPool numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
       <div className="button-group">
       <button className="button-accept cancel" 
@@ -71,12 +86,12 @@ const Group = ({kind, setKind}) => {
           setNumberOfTeams('')
           setStart(false)
         }}>RESET</button>
-    </div>
-      </>
+      </div>
+      </section>
     )}
 
     {(start && !pooling) && (
-      <>
+      <section ref={fillRef}>
       <GroupFill numberOfTeams={numberOfTeams} numberOfGroups={numberOfGroups} />
       <div className="button-group">
       <button className="button-accept cancel" 
@@ -86,7 +101,7 @@ const Group = ({kind, setKind}) => {
           setStart(false)
         }}>RESET</button>
     </div>
-      </>
+      </section>
     )}
 
 

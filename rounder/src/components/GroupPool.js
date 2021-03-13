@@ -1,11 +1,10 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import GroupDraw from './GroupDraw'
 
 const GroupPool = ({numberOfTeams, numberOfGroups}) => {
   const [start, setStart] = useState(false)
-  const [rand, setRand] = useState(false)
-  const [teams, setTeams] = useState([])
   const [teamsInPot, setTeamsInPot] = useState([])
+  const groupRef = useRef('')
 
   //reset teamsName on change teamsValue
   useEffect(() => {
@@ -34,6 +33,15 @@ const GroupPool = ({numberOfTeams, numberOfGroups}) => {
     setTeamsInPot(values);
   };
 
+    //scrolling
+    const scrollInto = () => {
+      setTimeout(() => {
+        groupRef.current.scrollIntoView({ behavior: 'smooth' })
+      }, 100
+      ) 
+    }
+
+
   return (
     <>
     <section className="tables">
@@ -56,11 +64,19 @@ const GroupPool = ({numberOfTeams, numberOfGroups}) => {
         ))
       }
 
-    <div className="button-group">
-      <button className="button-accept" onClick={() => setStart(true)}>START</button>
-      </div>
+        <div className="button-group">
+          <button className="button-accept" 
+            onClick={() => {
+              setStart(true)
+              scrollInto()
+              }}>
+              START
+          </button>
+        </div>
       </section>
+      <section ref={groupRef}>
       {start && <GroupDraw teamsInPot={teamsInPot} groups={groups} pots={pots}/>}
+      </section>
     </>
   )
 }

@@ -1,10 +1,11 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
 import GroupFillDraw from './GroupFillDraw'
 import GroupFixture from './GroupFixture'
 
 const GroupFill = ({numberOfTeams, numberOfGroups}) => {
   const [start, setStart] = useState(false)
   const [teamsInGroup, setTeamsInGroup] = useState([])
+  const fixturesRef = useRef('')
 
   useEffect(() => {
     setTeamsInGroup([])
@@ -30,6 +31,14 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
     setTeamsInGroup(values);
   };
 
+    //scrolling
+    const scrollInto = () => {
+      setTimeout(() => {
+        fixturesRef.current.scrollIntoView({ behavior: 'smooth' })
+      }, 100
+      ) 
+    }
+
   return (
     <>
     <section className="tables">
@@ -52,11 +61,19 @@ const GroupFill = ({numberOfTeams, numberOfGroups}) => {
         ))
       }
 
-    <div className="button-group">
-      <button className="button-accept" onClick={() => setStart(true)}>START</button>
-      </div>
+        <div className="button-group">
+          <button className="button-accept" 
+            onClick={() => {
+              setStart(true)
+              scrollInto()
+              }}>
+              START
+          </button>
+        </div>
       </section>
+      <section ref={fixturesRef}>
       {start && <GroupFillDraw teamsInGroup={teamsInGroup} numberOfGroups={numberOfGroups} numberOfTeams={numberOfTeams} />}
+      </section>
     </>
   )
 }
