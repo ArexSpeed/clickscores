@@ -86,7 +86,7 @@ const League = ({kind, setKind}) => {
       </div>
       </div>
       <h3 className="title">Teams quantity</h3>
-      <div className="button-group">
+      <div className="button-group teams-qty">
       {showTeamQty}
 
       </div>

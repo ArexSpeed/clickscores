@@ -43,9 +43,13 @@
   height: 70px;
   margin: 0 10px;
 }
+.helpBox{
+  margin: 20px;
+  color: #fff;
+}
 .button{
-  height: 50px;
-  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
   font-size: 24px;
   font-family: 'Baloo 2', cursive;
   margin: auto 5px;
@@ -82,7 +86,18 @@
   height: 70px;
   background: transparent;
   overflow: scroll;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
+.button-group::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 540px){
+  .button-group.teams-qty{
+    justify-content: flex-start;
+  }
+}
+
 .selector{
   width: 300px;
   height: 50px;
