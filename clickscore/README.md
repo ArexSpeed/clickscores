@@ -1,6 +1,9 @@
+
 # Clickscore
 
 Simulate your sports competition on http://click.sportstory.eu/
+
+![cs1](https://user-images.githubusercontent.com/62649296/113504821-f1110b80-953a-11eb-8648-1f00fe9603a8.png)
 
 ## Description
 
